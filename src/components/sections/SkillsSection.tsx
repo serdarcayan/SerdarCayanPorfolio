@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { buildSteps } from "../../data/buildSteps";
 import { skillCategories } from "../../data/skills";
-import { techStacks } from "../../data/techStack";
 import SectionTemplate from "../layout/SectionTemplate";
 import { Plus } from "lucide-react";
 
@@ -11,10 +10,6 @@ const formatItemIndex = (value: number | string | undefined) =>
 const SkillsSection = () => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(0);
 
-  const totalSkills = skillCategories.reduce(
-    (total, category) => total + category.skills.length,
-    0,
-  );
 
   const handleToggle = (index: number) => {
     setExpandedIndex((current) => (current === index ? null : index));
@@ -114,7 +109,7 @@ const SkillsSection = () => {
           </header>
 
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            {buildSteps.map((step, index) => (
+            {buildSteps.map((step) => (
               <article
                 key={step.number}
                 className="relative flex flex-col justify-between rounded-2xl border border-cyan-900/10 bg-white/80 p-4 shadow-[0_10px_28px_rgba(15,52,78,0.05)] transition-all duration-300 sm:p-5 lg:hover:-translate-y-1 lg:hover:border-cyan-800/25"

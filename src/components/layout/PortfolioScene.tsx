@@ -8,7 +8,6 @@ import ProjectsSection from "../sections/ProjectsSection";
 import ExperiencesSection from "../sections/ExperiencesSection";
 import ContactSection from "../sections/ContactSection";
 import { ChevronDown, ChevronUp } from "lucide-react";
-import DataSection from "../sections/DataSection";
 
 const PortfolioScene = () => {
   const [sectionIndex, setSectionIndex] = useState(0);

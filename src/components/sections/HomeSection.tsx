@@ -39,10 +39,24 @@ const HomeSection = ({ onSectionSelect }: HomeSectionProps) => {
             SC
           </span>
         )}
-
-        <span className="text-[10px] font-medium tracking-[0.2em] text-slate-500 sm:text-xs">
-          V0.6
-        </span>
+        <div className="flex items-center gap-2">
+          <a
+            href="https://github.com/serdarcayan/SerdarCayanPorfolio"
+            target="_blank"
+          >
+            <img
+              src="/svg/github.svg"
+              alt="github"
+              className="w-6 h-6 text-cyan-800"
+            />
+          </a>
+          <span className="text-[10px] font-medium tracking-[0.2em] text-slate-500 sm:text-xs">
+            |
+          </span>
+          <span className="text-[10px] font-medium tracking-[0.2em] text-slate-500 sm:text-xs">
+            V0.6
+          </span>
+        </div>
       </header>
 
       <div className="my-auto flex w-full max-w-5xl flex-col justify-center py-16 sm:py-20">
