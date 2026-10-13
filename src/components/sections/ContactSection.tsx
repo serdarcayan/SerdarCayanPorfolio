@@ -22,13 +22,17 @@ const ContactSection = () => {
             </a>
             <a href="" className="p-3 font-bold">
               <img
-                src="/svg/TurkishEngineering.svg"
+                src={`${import.meta.env.BASE_URL}svg/TurkishEngineering.svg`}
                 alt="github"
                 className="w-10 h-10"
               />
             </a>
             <a href="" target="_blank" className="p-3 font-bold">
-              <img src="/svg/github.svg" alt="github" className="w-10 h-10" />
+              <img
+                src={`${import.meta.env.BASE_URL}svg/github.svg`}
+                alt="github"
+                className="w-10 h-10"
+              />
             </a>
             <a
               href=""

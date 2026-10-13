@@ -45,7 +45,7 @@ const HomeSection = ({ onSectionSelect }: HomeSectionProps) => {
             target="_blank"
           >
             <img
-              src="/svg/github.svg"
+              src={`${import.meta.env.BASE_URL}svg/github.svg`}
               alt="github"
               className="w-6 h-6 text-cyan-800"
             />

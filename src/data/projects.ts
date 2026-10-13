@@ -24,7 +24,7 @@ export const projects: Project[] = [
     category: "GÜÇ ELEKTRONİĞİ / GÖMÜLÜ SİSTEM",
     description:
       "12 V girişten 0–30 V ayarlanabilir çıkış sağlayan, sayısal kontrollü buck-boost laboratuvar güç kaynağı.",
-    image: "/brands/ssps.png",
+    image: `${import.meta.env.BASE_URL}brands/ssps.png`,
     technologies: [
       "ATmega328P",
       "AVR programlama",
@@ -65,7 +65,7 @@ export const projects: Project[] = [
     category: "TAM YAPI",
     description:
       "React, Node.js ve PostgreSQL ile geliştirilen tam yığın mühendislik topluluğu platformu.",
-    image: "/brands/turkish-engineering.png",
+    image: `${import.meta.env.BASE_URL}brands/turkish-engineering.png`,
     technologies: [
       "React",
       "TypeScript",
