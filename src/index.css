@@ -1,0 +1,264 @@
+@import "tailwindcss";
+
+:root {
+  font-family: Inter, "Segoe UI", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #12243a;
+  background-color: #edf4f8;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #edf4f8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-th a {
+  text-decoration: none;
+}
+
+section::-webkit-slider-thumb {
+  display: none;
+}
+
+.section-stack {
+  scrollbar-width: none;
+}
+
+.section-stack::-webkit-scrollbar {
+  display: none;
+}
+
+.data-carousel {
+  scrollbar-width: none;
+}
+
+.data-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.section-scroll-track,
+.section-scroll-panel {
+  min-width: 0;
+  min-height: 0;
+}
+
+.section-scroll-panel {
+  border-color: rgba(255, 255, 255, 0.28);
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.28),
+      rgba(238, 246, 251, 0.2) 55%,
+      rgba(248, 250, 252, 0.24)
+    );
+  box-shadow:
+    0 24px 80px rgba(20, 52, 78, 0.1),
+    0 1px 0 rgba(255, 255, 255, 0.9) inset;
+}
+
+.analytics-theme {
+  color: #12243a;
+  border-color: rgba(8, 51, 68, 0.12);
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.9),
+      rgba(238, 246, 251, 0.88) 55%,
+      rgba(236, 254, 255, 0.78)
+    );
+}
+
+.analytics-theme [class~="bg-white/70"] {
+  background-color: rgba(255, 255, 255, 0.82);
+}
+
+.analytics-theme [class~="bg-neutral-100"] {
+  background-color: #f0f9ff;
+}
+
+.analytics-theme [class~="bg-neutral-200"],
+.analytics-theme [class~="bg-neutral-200/80"] {
+  background-color: #e0f2fe;
+}
+
+.analytics-theme [class~="bg-neutral-900"] {
+  background-color: #12243a;
+}
+
+.analytics-theme [class~="bg-neutral-800"],
+.analytics-theme [class~="bg-neutral-800/70"] {
+  background-color: #0e7490;
+}
+
+.analytics-theme [class~="bg-neutral-700"] {
+  background-color: #155e75;
+}
+
+.analytics-theme [class~="bg-neutral-400/60"] {
+  background-color: rgba(71, 85, 105, 0.35);
+}
+
+.analytics-theme [class~="hover:bg-neutral-600"]:hover {
+  background-color: #0e7490;
+}
+
+.analytics-theme [class~="text-neutral-900"] {
+  color: #12243a;
+}
+
+.analytics-theme [class~="text-neutral-800"] {
+  color: #155e75;
+}
+
+.analytics-theme [class~="text-neutral-700"],
+.analytics-theme [class~="text-neutral-600"] {
+  color: #475569;
+}
+
+.analytics-theme [class~="text-neutral-500"],
+.analytics-theme [class~="text-neutral-400"] {
+  color: #64748b;
+}
+
+.analytics-theme [class~="border-neutral-200"],
+.analytics-theme [class~="border-neutral-200/80"],
+.analytics-theme [class~="border-neutral-300"] {
+  border-color: rgba(8, 51, 68, 0.12);
+}
+
+.analytics-theme [class~="ring-neutral-500/50"] {
+  --tw-ring-color: rgba(14, 116, 144, 0.45);
+}
+
+.section-scroll-track {
+  perspective: 1200px;
+  perspective-origin: center center;
+}
+
+.section-scroll-panel {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.home-role-item {
+  animation: home-role-slide-in 600ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.background-gradient {
+  background:
+    radial-gradient(
+      ellipse at top left,
+      rgba(42, 98, 102, 0.3) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse at top right,
+      rgba(31, 54, 87, 0.28) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse at bottom right,
+      rgba(39, 29, 83, 0.2) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse at bottom left,
+      rgba(92, 67, 31, 0.18) 0%,
+      transparent 55%
+    ),
+    #edf4f8;
+}
+
+/* Custom scrollbar */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(19, 126, 145, 0.38) transparent;
+}
+
+/* Chrome, Edge, Safari */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(19, 126, 145, 0.32);
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background-clip: padding-box;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(19, 126, 145, 0.65);
+  background-clip: padding-box;
+}
+
+@keyframes home-role-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.75rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-role-item {
+    animation: none;
+  }
+
+  .section-scroll-panel {
+    animation: none;
+    transform: none;
+  }
+}
+
+@supports (animation-timeline: view()) {
+  .section-scroll-track {
+    view-timeline-name: --section-view;
+    view-timeline-axis: block;
+  }
+
+  .section-scroll-panel {
+    animation: section-panel-3d 1s linear both;
+    animation-timeline: --section-view;
+    animation-range: cover 0% cover 100%;
+  }
+
+  @keyframes section-panel-3d {
+    0% {
+      transform: rotateX(12deg) scale(0.88);
+    }
+
+    50% {
+      transform: rotateX(0) scale(1);
+    }
+
+    100% {
+      transform: rotateX(-12deg) scale(0.88);
+    }
+  }
+}
