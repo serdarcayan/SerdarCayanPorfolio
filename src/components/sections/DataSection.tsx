@@ -1108,9 +1108,6 @@ const DataSection = () => {
           </button>
         </footer>
       </div>
-      <div className="absolute inset-0 flex items-center justify-center bg-black/40 backdrop-blur-sm backdrop-grayscale-100">
-        <p className="font-bold text-lg bac">Yakında kullanıma açılacak...</p>
-      </div>
     </SectionTemplate>
   );
 };
