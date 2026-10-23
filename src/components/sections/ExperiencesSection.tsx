@@ -1,67 +1,75 @@
-import { ChevronUp } from "lucide-react";
+import { BriefcaseBusiness, GraduationCap } from "lucide-react";
 import SectionTemplate from "../layout/SectionTemplate";
 import { journey } from "../../data/experiences";
 
-
 const ExperiencesSection = () => {
   return (
-    <SectionTemplate className="bg-transparent">
-      <header className="mb-5 flex w-full max-w-7xl shrink-0 items-end justify-between gap-3 sm:mb-6 sm:gap-4">
-        <div>
-          <p className="mb-1.5 text-[10px] font-semibold tracking-[0.2em] text-cyan-800 sm:mb-2 sm:text-xs sm:tracking-[0.25em]">
-            GELİŞİM YOLCULUĞU
-          </p>
-          <h2 className="text-2xl font-semibold tracking-tight sm:text-4xl">
-            Gelişim Yolculuğu
-          </h2>
-        </div>
-        <span className="pb-1 text-xs text-neutral-500 sm:text-sm">
-          {String(journey.length).padStart(2, "0")} aşama
-        </span>
-      </header>
-      <div className="relative flex-1">
+    <SectionTemplate
+      className="bg-transparent"
+      hasHeader={true}
+      hasJourney={true}
+      sectionTitle={"Gelişim Yolculuğu"}
+      smallText={"KARİYER & EĞİTİM"}
+      journey={journey.length}
+    >
+      <div className="relative mx-auto w-full max-w-3xl">
         <div
           aria-hidden="true"
-          className="absolute bottom-4 left-4 top-4 z-0 w-px -translate-x-1/2 bg-cyan-800/30 sm:left-1/2"
+          className="absolute bottom-3 left-[11px] top-3 z-0 w-px bg-cyan-800/15"
         />
-        <ol className="relative space-y-7 sm:space-y-8">
-          {journey.map(({ title, role, description, date }, index) => (
-            <li
-              key={title}
-              className="relative grid grid-cols-[2rem_minmax(0,1fr)] items-center gap-x-4 sm:grid-cols-[minmax(0,1fr)_3rem_minmax(0,1fr)] sm:gap-x-5 "
-            >
-              <div
-                className={`relative z-10 col-start-1 row-start-1 flex h-8 w-8 justify-self-center items-center justify-center rounded-full border shadow-sm ring-4 ring-white/75 sm:col-start-2 ${
-                  index === 0
-                    ? "animate-bounce border-cyan-900 bg-cyan-900 text-white"
-                    : "border-cyan-800/30 bg-white text-cyan-800"
-                }`}
-                aria-hidden="true"
-              >
-                <ChevronUp size={24} strokeWidth={1.5} />
-              </div>
+        <ol className="relative">
+          {journey.map(({ title, role, description, date }, index) => {
+            const isCurrent = date.includes("Devam");
+            const isEducation = role === "Öğrenci";
+            const MarkerIcon = isEducation ? GraduationCap : BriefcaseBusiness;
 
-              <div
-                className={`col-start-2 row-start-1 min-w-0 ${
-                  index % 2 === 0
-                    ? "sm:col-start-3 sm:max-w-xl"
-                    : "sm:col-start-1 sm:ml-auto sm:max-w-xl sm:text-right"
+            return (
+              <li
+                key={title}
+                className={`relative grid grid-cols-[1.5rem_minmax(0,1fr)] gap-x-2.5 py-2.5 sm:py-3 ${
+                  index < journey.length - 1
+                    ? "border-b border-cyan-900/[0.07]"
+                    : ""
                 }`}
               >
-                <div className="flex items-center gap-2">
-                  <h3 className="text-base font-bold text-neutral-900 sm:text-lg">
-                    {title}
-                  </h3>
-                  <p className="text-sm font-semibold text-cyan-800">{role}</p>
-                  <p className="text-xs text-neutral-500">{date}</p>
+                <div
+                  className={`relative z-10 mt-0.5 flex size-[23px] items-center justify-center justify-self-center rounded-full border bg-[#f5f9fb] ${
+                    isCurrent
+                      ? "border-cyan-800/40 text-cyan-800"
+                      : "border-cyan-900/10 text-cyan-700/70"
+                  }`}
+                  aria-hidden="true"
+                >
+                  <MarkerIcon size={12} strokeWidth={1.8} />
                 </div>
 
-                <p className="mt-2 border-b border-cyan-900/15 pb-2 text-sm leading-relaxed text-neutral-600 sm:text-base">
-                  {description}
-                </p>
-              </div>
-            </li>
-          ))}
+                <div className="min-w-0">
+                  <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-0.5">
+                    <h3 className="text-[13px] font-semibold leading-snug text-[#12243a] sm:text-sm">
+                      {title}
+                    </h3>
+                    <span className="shrink-0 font-mono text-[10px] text-neutral-500">
+                      {date}
+                    </span>
+                  </div>
+                  <div className="mt-0.5 flex flex-wrap items-center gap-x-2">
+                    <p className="text-[11px] font-medium text-cyan-800">
+                      {role}
+                    </p>
+                    {isCurrent && (
+                      <span className="inline-flex items-center gap-1 text-[9px] font-medium text-emerald-700">
+                        <span className="size-1 rounded-full bg-emerald-500" />
+                        Devam ediyor
+                      </span>
+                    )}
+                  </div>
+                  <p className="mt-1 text-[11px] leading-relaxed text-neutral-500 sm:text-xs">
+                    {description}
+                  </p>
+                </div>
+              </li>
+            );
+          })}
         </ol>
       </div>
     </SectionTemplate>

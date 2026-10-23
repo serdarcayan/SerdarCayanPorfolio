@@ -332,7 +332,11 @@ const DataSection = () => {
 
   if (analyticsLoading) {
     return (
-      <SectionTemplate className="analytics-theme">
+      <SectionTemplate
+        className="analytics-theme"
+        hasHeader={false}
+        hasJourney={false}
+      >
         <div className="flex h-full w-full items-center justify-center text-sm text-neutral-500">
           Analitikler yükleniyor...
         </div>
@@ -341,20 +345,14 @@ const DataSection = () => {
   }
 
   return (
-    <SectionTemplate className="analytics-theme">
+    <SectionTemplate
+      className="analytics-theme relative"
+      hasHeader={true}
+      hasJourney={false}
+      smallText={"BUNU DA İLGİNİZİ ÇEKEBİLİR"}
+      sectionTitle={"CANLI VERİ VE ANALİTİKLER"}
+    >
       <div className="mx-auto flex h-full w-full max-w-7xl min-h-0 flex-col gap-6 sm:gap-8 md:gap-10">
-        <header className="w-full min-w-0 shrink-0">
-          <div className="flex flex-col items-start justify-center gap-2">
-            <p className="text-[8px] font-semibold tracking-[0.22em] text-neutral-500 sm:text-xs">
-              BUNU DA İLGİNİZİ ÇEKEBİLİR
-            </p>
-
-            <h3 className="text-xl font-semibold tracking-tight sm:text-5xl">
-              CANLI VERİ VE ANALİTİKLER
-            </h3>
-          </div>
-        </header>
-
         <section
           aria-label="Data analytics highlights"
           className="flex w-full min-h-0 min-w-0 flex-1"
@@ -788,7 +786,9 @@ const DataSection = () => {
                       Kaynaklar
                     </p>
 
-                    <span className="text-[8px] text-neutral-400">Paylaşım</span>
+                    <span className="text-[8px] text-neutral-400">
+                      Paylaşım
+                    </span>
                   </div>
 
                   <div className="mt-4 space-y-3 sm:mt-5 sm:space-y-4">
@@ -880,7 +880,8 @@ const DataSection = () => {
                         acquisition.engagementChange,
                       )}`}
                     >
-                      {formatChange(acquisition.engagementChange)} önceki döneme göre
+                      {formatChange(acquisition.engagementChange)} önceki döneme
+                      göre
                     </p>
                   </div>
 
@@ -941,7 +942,9 @@ const DataSection = () => {
                       En çok izlenenler
                     </p>
 
-                    <span className="text-[8px] text-neutral-400">Görüntüleme</span>
+                    <span className="text-[8px] text-neutral-400">
+                      Görüntüleme
+                    </span>
                   </div>
 
                   <div className="mt-4 space-y-3 sm:mt-5 sm:space-y-4">
@@ -1104,6 +1107,9 @@ const DataSection = () => {
             <ChevronRight size={18} aria-hidden="true" />
           </button>
         </footer>
+      </div>
+      <div className="absolute inset-0 flex items-center justify-center bg-black/40 backdrop-blur-sm backdrop-grayscale-100">
+        <p className="font-bold text-lg bac">Yakında kullanıma açılacak...</p>
       </div>
     </SectionTemplate>
   );

@@ -30,20 +30,14 @@ const ProjectsSection = () => {
   }, [selectedProject]);
 
   return (
-    <SectionTemplate className="bg-transparent">
-      <header className="mb-5 flex w-full max-w-7xl shrink-0 items-end justify-between gap-3 sm:mb-6 sm:gap-4">
-        <div>
-          <p className="mb-1.5 text-[10px] font-semibold tracking-[0.2em] text-cyan-800 sm:mb-2 sm:text-xs sm:tracking-[0.25em]">
-            SEÇİLİ ÇALIŞMALAR
-          </p>
-          <h2 className="text-2xl font-semibold tracking-tight sm:text-4xl">
-            Projeler
-          </h2>
-        </div>
-        <span className="pb-1 text-xs text-neutral-500 sm:text-sm">
-          {String(projects.length).padStart(2, "0")} proje
-        </span>
-      </header>
+    <SectionTemplate
+      className="bg-transparent"
+      hasHeader={true}
+      hasJourney={true}
+      journey={projects.length}
+      sectionTitle={"Projeler"}
+      smallText={"SEÇİLİ ÇALIŞMALAR"}
+    >
       <div className="grid w-full max-w-7xl grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
         {projects.map((project) => (
           <ProjectCard

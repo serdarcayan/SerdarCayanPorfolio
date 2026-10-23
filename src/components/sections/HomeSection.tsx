@@ -27,7 +27,7 @@ const HomeSection = ({ onSectionSelect }: HomeSectionProps) => {
   }, []);
 
   return (
-    <SectionTemplate className="bg-transparent">
+    <SectionTemplate className="bg-transparent" hasHeader={false} hasJourney={false}>
       <header className="flex w-full items-center justify-between">
         {SiteIcon ? (
           <img
@@ -117,11 +117,11 @@ const HomeSection = ({ onSectionSelect }: HomeSectionProps) => {
         </div>
 
         <div className="flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
-          <p className="max-w-md text-sm leading-7 text-slate-600 sm:text-base">
+          {/* <p className="max-w-md text-sm leading-7 text-slate-600 sm:text-base">
             Donanım ve yazılımı bir bütün olarak ele alıyor; elektronik
             sistemlerden gömülü sistem çözümlerinden, yapay zekâdan web
             uygulamalarına kadar fikirleri çalışan sistemlere dönüştürüyorum.
-          </p>
+          </p> */}
 
           <button
             onClick={() => onSectionSelect(3)}

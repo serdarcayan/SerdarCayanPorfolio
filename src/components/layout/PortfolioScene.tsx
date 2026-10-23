@@ -8,6 +8,7 @@ import ProjectsSection from "../sections/ProjectsSection";
 import ExperiencesSection from "../sections/ExperiencesSection";
 import ContactSection from "../sections/ContactSection";
 import { ChevronDown, ChevronUp } from "lucide-react";
+import DataSection from "../sections/DataSection";
 
 const PortfolioScene = () => {
   const [sectionIndex, setSectionIndex] = useState(0);
@@ -114,7 +115,7 @@ const PortfolioScene = () => {
 
         <ContactSection />
 
-        {/* <DataSection /> */}
+        <DataSection />
         {/* Backend API servisi ile erişime açılacak. */}
       </div>
       <Indicator

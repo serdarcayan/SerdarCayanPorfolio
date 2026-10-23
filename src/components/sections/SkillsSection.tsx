@@ -3,6 +3,7 @@ import { buildSteps } from "../../data/buildSteps";
 import { skillCategories } from "../../data/skills";
 import SectionTemplate from "../layout/SectionTemplate";
 import { Plus } from "lucide-react";
+import { techStacks } from "../../data/techStack";
 
 const formatItemIndex = (value: number | string | undefined) =>
   String((Number(value) || 0) + 1).padStart(2, "0");
@@ -10,35 +11,27 @@ const formatItemIndex = (value: number | string | undefined) =>
 const SkillsSection = () => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(0);
 
-
   const handleToggle = (index: number) => {
     setExpandedIndex((current) => (current === index ? null : index));
   };
 
   return (
-    <SectionTemplate className="bg-[#f7f7f5]/80">
-      <div className="flex w-full max-w-7xl flex-col gap-8 sm:gap-10 lg:gap-14">
-        <section>
-          <header className="mb-5 flex flex-col gap-3 sm:mb-7 sm:flex-row sm:items-end sm:justify-between">
-            <div>
-              <p className="mb-2 text-[10px] font-semibold tracking-[0.25em] text-cyan-800 sm:text-xs">
-                UZMANLIK
-              </p>
-              <h2 className="text-2xl font-semibold tracking-[-0.04em] sm:text-4xl">
-                Yetenekler
-              </h2>
-              <p className="mt-2 max-w-lg text-sm leading-relaxed text-neutral-600">
-                Elektronik, gömülü sistemler ve yazılım geliştirme alanındaki
-                temel yetkinliklerim.
-              </p>
-            </div>
+    <SectionTemplate
+      className="bg-[#f7f7f5]/80"
+      hasHeader={true}
+      hasJourney={true}
+      sectionTitle={"Yetenekler"}
+      smallText={"UZMANLIK"}
+      journey={skillCategories.length}
+    >
+      <div className="flex w-full flex-col gap-7 sm:gap-9">
+        <section className="w-full">
+          <p className="mb-4 max-w-xl border-l-2 border-cyan-700/50 pl-3 text-xs leading-relaxed text-neutral-600 sm:mb-5 sm:text-sm">
+            Elektronik, gömülü sistemler ve yazılım geliştirme alanındaki temel
+            yetkinliklerim.
+          </p>
 
-            <span className="self-start rounded-full border border-cyan-800/20 bg-cyan-50/80 px-2.5 py-1 font-mono text-[10px] tracking-[0.16em] text-cyan-900 sm:self-auto">
-              {String(skillCategories.length).padStart(2, "0")} KATEGORİ
-            </span>
-          </header>
-
-          <div className="mx-auto flex w-full max-w-4xl flex-col gap-3 sm:gap-2">
+          <div className="mx-auto flex w-full flex-col divide-y divide-cyan-900/10 border-y border-cyan-900/10">
             {skillCategories.map((category, index) => (
               <SkillsCard
                 key={category.title}
@@ -51,39 +44,39 @@ const SkillsSection = () => {
           </div>
         </section>
 
-        {/* <section className="border-t border-cyan-900/15 pt-7 sm:pt-10">
-          <header className="mb-5 sm:mb-6">
-            <p className="mb-2 text-[10px] font-semibold tracking-[0.25em] text-cyan-800 sm:text-xs">
+        <section className="border-t border-cyan-900/15 pt-6 sm:pt-8">
+          <header className="mb-4 sm:mb-5">
+            <p className="mb-1.5 text-[9px] font-semibold tracking-[0.2em] text-cyan-800 sm:text-[10px]">
               TEKNOLOJİLER / 02
             </p>
-            <h3 className="text-2xl font-semibold tracking-[-0.04em] sm:text-3xl">
+            <h3 className="text-xl font-semibold tracking-tight text-[#12243a] sm:text-2xl">
               Teknoloji yığını<span className="text-neutral-400">.</span>
             </h3>
-            <p className="mt-2 text-sm text-neutral-600">
+            <p className="mt-1 text-xs text-neutral-500 sm:text-sm">
               Çalıştığım teknolojiler ve araçlar.
             </p>
           </header>
 
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-2 gap-2 sm:gap-3 lg:grid-cols-4">
             {techStacks.map((stack, index) => (
               <article
                 key={stack.title}
-                className="rounded-2xl border border-cyan-900/10 bg-white/80 p-4 shadow-[0_10px_25px_rgba(15,52,78,0.05)] sm:p-5"
+                className="min-w-0 rounded-xl border border-cyan-900/10 bg-white/70 p-3 transition-colors hover:border-cyan-800/20 sm:rounded-2xl sm:p-4"
               >
-                <header className="mb-4 flex items-center justify-between">
-                  <h4 className="text-[10px] font-bold tracking-[0.18em] text-cyan-800">
+                <header className="mb-3 flex items-center justify-between gap-2">
+                  <h4 className="text-[9px] font-bold tracking-[0.12em] text-cyan-800 sm:text-[10px]">
                     {stack.title}
                   </h4>
-                  <span className="font-mono text-[10px] text-neutral-500">
+                  <span className="shrink-0 font-mono text-[9px] text-neutral-400">
                     {formatItemIndex(index)}
                   </span>
                 </header>
 
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-1.5">
                   {stack.technologies.map((technology) => (
                     <span
                       key={technology}
-                      className="rounded-lg border border-cyan-900/10 bg-cyan-50/70 px-2.5 py-1.5 text-[11px] font-medium text-cyan-950 transition-colors"
+                      className="rounded-md bg-cyan-50/80 px-2 py-1 text-[10px] font-medium leading-snug text-cyan-950 sm:text-[11px]"
                     >
                       {technology}
                     </span>
@@ -92,54 +85,49 @@ const SkillsSection = () => {
               </article>
             ))}
           </div>
-        </section> */}
+        </section>
 
-        <section className="border-t border-cyan-900/15 pt-7 sm:pt-10">
-          <header className="mb-5 sm:mb-6">
-            <p className="mb-2 text-[10px] font-semibold tracking-[0.25em] text-cyan-800 sm:text-xs">
+        <section className="border-t border-cyan-900/15 pt-6 sm:pt-8">
+          <header className="mb-4 sm:mb-5">
+            <p className="mb-1.5 text-[9px] font-semibold tracking-[0.2em] text-cyan-800 sm:text-[10px]">
               ÇALIŞMA YÖNTEMİ
             </p>
-            <h3 className="text-2xl font-semibold tracking-[-0.04em] sm:text-3xl">
+            <h3 className="text-xl font-semibold tracking-tight text-[#12243a] sm:text-2xl">
               Nasıl çalışırım<span className="text-neutral-400">.</span>
             </h3>
-            <p className="mt-2 max-w-lg text-sm leading-relaxed text-neutral-600">
+            <p className="mt-1 max-w-lg text-xs leading-relaxed text-neutral-500 sm:text-sm">
               Problemi anlamaktan test ve sürekli iyileştirmeye kadar olan
               süreç.
             </p>
           </header>
 
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-2 gap-2 sm:gap-3 lg:grid-cols-4">
             {buildSteps.map((step) => (
               <article
                 key={step.number}
-                className="relative flex flex-col justify-between rounded-2xl border border-cyan-900/10 bg-white/80 p-4 shadow-[0_10px_28px_rgba(15,52,78,0.05)] transition-all duration-300 sm:p-5 lg:hover:-translate-y-1 lg:hover:border-cyan-800/25"
+                className="relative flex min-h-32 flex-col justify-between overflow-hidden rounded-xl border border-cyan-900/10 bg-white/70 p-3 transition-colors hover:border-cyan-800/20 sm:min-h-36 sm:rounded-2xl sm:p-4"
               >
-                <div className="absolute inset-0 ">
-                  <span className="absolute  right-0 top-0 p-4 font-mono text-7xl font-medium tracking-[0.12em] text-neutral-500/10 ">
-                    {step.number}
-                  </span>
-                </div>
-
-                <h4 className="mb-2 text-base font-semibold tracking-[-0.02em] text-[#1d1d1f]">
+                <span className="mb-3 font-mono text-[10px] tracking-[0.14em] text-cyan-800/60">
+                  {step.number}
+                </span>
+                <h4 className="mb-1.5 text-xs font-semibold leading-snug tracking-tight text-[#12243a] sm:text-sm">
                   {step.title}
                 </h4>
 
-                <p className="text-sm leading-relaxed text-neutral-600">
+                <p className="text-[11px] leading-relaxed text-neutral-500 sm:text-xs">
                   {step.description}
                 </p>
-
-                <div className="mt-5 h-1 w-10 rounded-full bg-linear-to-r from-cyan-700 to-blue-600" />
               </article>
             ))}
           </div>
         </section>
 
-        <footer className="flex flex-col gap-2 border-t border-cyan-900/15 pt-5 pb-2 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-xs text-neutral-500">
+        <footer className="flex flex-col gap-2 border-t border-cyan-900/15 pt-4 pb-2 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-[11px] text-neutral-500 sm:text-xs">
             Donanım, yazılımla buluşur; Teknoloji eksosisteminin çalışması
             amaçlanır.
           </p>
-          <span className="font-mono text-[10px] tracking-[0.18em] text-neutral-400">
+          <span className="font-mono text-[9px] tracking-[0.14em] text-neutral-400">
             YETENEKLER / TEKNOLOJİLER / İŞ AKIŞI
           </span>
         </footer>
@@ -166,31 +154,35 @@ const SkillsCard = ({ category, index, isOpen, onToggle }: SkillsCardType) => {
   const panelId = `skill-panel-${index}`;
 
   return (
-    <article className="group overflow-hidden rounded-2xl border border-neutral-200 bg-white/80 shadow-[0_10px_30px_rgba(0,0,0,0.02)] transition-all duration-300 lg:hover:border-neutral-300 lg:hover:shadow-[0_18px_40px_rgba(0,0,0,0.05)]">
+    <article
+      className={`overflow-hidden transition-colors p-2 ${
+        isOpen ? "bg-white/40 shadow-inner rounded" : "bg-transparent"
+      }`}
+    >
       <button
         type="button"
         onClick={onToggle}
-        className="flex w-full items-center justify-between gap-3 p-4 text-left sm:p-5"
+        className="flex min-h-12 w-full items-center justify-between gap-3 py-3 text-left sm:py-3.5"
         aria-expanded={isOpen}
         aria-controls={panelId}
       >
-        <div className="flex items-center gap-3">
-          <span className="font-mono text-[10px] font-medium tracking-[0.12em] text-neutral-500">
+        <div className="flex min-w-0 items-center gap-3">
+          <span className="font-mono text-[9px] font-medium tracking-[0.12em] text-cyan-800/65">
             {formatItemIndex(index)}
           </span>
 
-          <h3 className="text-sm font-semibold leading-snug tracking-[-0.02em] text-[#1d1d1f] sm:text-base">
+          <h3 className="text-left text-[13px] font-medium leading-snug tracking-tight text-[#12243a] sm:text-sm">
             {category.title}
           </h3>
         </div>
 
         <span
-          className={`inline-flex h-7 w-7 p-1 items-center justify-center rounded-full border border-neutral-200 text-sm font-medium text-neutral-600 transition-transform duration-300 ${
+          className={`inline-flex size-6 shrink-0 items-center justify-center text-cyan-800/70 transition-transform duration-300 ${
             isOpen ? "rotate-45" : "rotate-0"
           }`}
           aria-hidden="true"
         >
-          <Plus />
+          <Plus size={16} strokeWidth={1.5} />
         </span>
       </button>
 
@@ -201,13 +193,13 @@ const SkillsCard = ({ category, index, isOpen, onToggle }: SkillsCardType) => {
         }`}
       >
         <div className="min-h-0 overflow-hidden">
-          <ul className="flex flex-col gap-2.5 border-t border-neutral-200 px-4 pb-4 pt-4 sm:px-5">
+          <ul className="flex flex-col gap-2 border-t border-cyan-900/10 pb-3 pl-7 pr-2 pt-3">
             {category.skills.map((skill) => (
               <li
                 key={skill}
-                className="flex items-start gap-2.5 text-sm leading-relaxed text-neutral-600"
+                className="flex items-start gap-2 text-xs leading-relaxed text-neutral-600 sm:text-[13px]"
               >
-                <span className="mt-1.75 h-1.5 w-1.5 shrink-0 rounded-full bg-neutral-900" />
+                <span className="mt-1.5 size-1 shrink-0 rounded-full bg-cyan-700/60" />
                 <span>{skill}</span>
               </li>
             ))}

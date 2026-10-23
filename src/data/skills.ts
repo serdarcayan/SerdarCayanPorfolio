@@ -10,7 +10,7 @@ export const skillCategories = [
   },
   {
     title: "Ön Uç Geliştirme",
-    skills: ["JavaScript", "TypeScript", "React", "TypeScript", "Tailwind"],
+    skills: ["JavaScript", "TypeScript", "React", "Tailwind"],
   },
   {
     title: "Arka Uç Geliştirme",
