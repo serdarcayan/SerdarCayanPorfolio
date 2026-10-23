@@ -18,7 +18,11 @@ const ContactSection = () => {
           </p>
           <div className="my-2 flex items-center justify-center gap-4 border-t border-cyan-900/15 py-2">
             <a href="" className="p-3 font-bold">
-              LinkedIn
+              <img
+                src={`${import.meta.env.BASE_URL}png/LI-In-Bug.png`}
+                alt="github"
+                className="w-10"
+              />
             </a>
             <a href="" className="p-3 font-bold">
               <img
@@ -90,6 +94,39 @@ const ContactSection = () => {
           </div>
         </aside>
       </div>
+      <footer className="w-full">
+        <div className="w-full max-w-7xl m-auto flex items-center gap-4 border-t border-cyan-900/15 p-2">
+
+          <p className="text-sm text-slate-500 whitespace-nowrap">Altyapısında</p>
+          <div className="flex items-center gap-4">
+            <img
+              src={`${import.meta.env.BASE_URL}svg/react.svg`}
+              alt="react"
+              className="h-6 w-6"
+            />
+            <img
+              src={`${import.meta.env.BASE_URL}svg/vite.svg`}
+              alt="vite"
+              className="h-6 w-6"
+            />
+            <img
+              src={`${import.meta.env.BASE_URL}svg/tailwindcss.svg`}
+              alt="vite"
+              className="h-6 w-6"
+            />
+            <img
+              src={`${import.meta.env.BASE_URL}svg/ts-logo-128.svg`}
+              alt="vite"
+              className="h-6 w-6"
+            />
+            <img
+              src={`${import.meta.env.BASE_URL}svg/GitHub_Invertocat_Black.svg`}
+              alt="vite"
+              className="h-6 w-6"
+            />
+          </div>
+        </div>
+      </footer>
     </SectionTemplate>
   );
 };
