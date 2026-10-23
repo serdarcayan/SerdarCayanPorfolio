@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import packageJson from "../../../package.json";
 import SectionTemplate from "../layout/SectionTemplate";
 import SiteIcon from "../../assets/SiteIcon.svg";
 
@@ -54,7 +55,7 @@ const HomeSection = ({ onSectionSelect }: HomeSectionProps) => {
             |
           </span>
           <span className="text-[10px] font-medium tracking-[0.2em] text-slate-500 sm:text-xs">
-            V0.6
+            V{packageJson.version}
           </span>
         </div>
       </header>
