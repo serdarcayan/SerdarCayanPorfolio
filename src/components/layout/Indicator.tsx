@@ -21,7 +21,7 @@ const Indicator = ({
         aria-label="Previous section"
         disabled={sectionIndex === 0}
         onClick={() => onSectionSelect(sectionIndex - 1)}
-        className="flex h-7 w-7 items-center justify-center text-cyan-800 transition hover:text-amber-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-700/40 disabled:cursor-not-allowed disabled:opacity-25"
+        className="flex h-7 w-7 items-center justify-center text-slate-400 transition hover:text-[#d9b486] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#7fc2d4]/40 disabled:cursor-not-allowed disabled:opacity-25"
       >
         <ChevronUp size={16} strokeWidth={1.5} />
       </button>
@@ -38,10 +38,10 @@ const Indicator = ({
               aria-current={isActive ? "page" : undefined}
               title={tab.title}
               onClick={() => onSectionSelect(index)}
-              className={`group flex h-5 w-5 items-center justify-center rounded-full transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-700/40 ${
+              className={`group flex h-5 w-5 items-center justify-center rounded-full transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#7fc2d4]/40 ${
                 isActive
-                  ? "bg-cyan-800 shadow-[0_0_16px_rgba(8,145,178,0.35)]"
-                  : "bg-slate-400/60 hover:scale-125 hover:bg-cyan-700"
+                    ? "bg-[#7fc2d4] shadow-[0_0_12px_rgba(127,194,212,0.28)]"
+                    : "bg-slate-600/70 hover:scale-125 hover:bg-slate-400"
               }`}
             >
               <span
@@ -61,7 +61,7 @@ const Indicator = ({
         aria-label="Next section"
         disabled={sectionIndex === tabs.length - 1}
         onClick={() => onSectionSelect(sectionIndex + 1)}
-        className="flex h-7 w-7 items-center justify-center text-cyan-800 transition hover:text-amber-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-700/40 disabled:cursor-not-allowed disabled:opacity-25"
+        className="flex h-7 w-7 items-center justify-center text-slate-400 transition hover:text-[#d9b486] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#7fc2d4]/40 disabled:cursor-not-allowed disabled:opacity-25"
       >
         <ChevronDown size={16} strokeWidth={1.5} />
       </button>

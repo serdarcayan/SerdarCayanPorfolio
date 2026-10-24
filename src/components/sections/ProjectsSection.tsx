@@ -31,7 +31,6 @@ const ProjectsSection = () => {
 
   return (
     <SectionTemplate
-      className="bg-transparent"
       hasHeader={true}
       hasJourney={true}
       journey={projects.length}
@@ -48,12 +47,12 @@ const ProjectsSection = () => {
         ))}
       </div>
 
-      <div className="mt-4 mb-16 flex w-full max-w-7xl items-center justify-center gap-2 p-2 text-sm text-neutral-500 sm:flex-row sm:gap-4">
-        <div className="flex-1 border-t border-cyan-900/25"></div>
-        <div className="font-medium text-cyan-900 transition-colors hover:text-amber-700">
+      <div className="mt-4 mb-16 flex w-full max-w-7xl items-center justify-center gap-2 p-2 text-sm text-slate-400 sm:flex-row sm:gap-4">
+        <div className="flex-1 border-t border-white/25"></div>
+        <div className="font-medium text-[#91b9bd] transition-colors hover:text-[#d9b486]">
           <a href="#TurkishEngineering">Daha fazla proje görüntüle</a>
         </div>
-        <div className="flex-1 border-t border-cyan-900/25"></div>
+        <div className="flex-1 border-t border-white/25"></div>
       </div>
 
       {selectedProject && (
@@ -87,24 +86,24 @@ const ProjectCard = ({ project, onViewDetails }: ProjectCardProps) => {
       : Code2;
   const visualStyle = isPowerProject
     ? {
-        background: "from-amber-100 via-orange-50 to-slate-100",
-        accent: "text-amber-700",
+      background: "from-amber-950 via-orange-950 to-slate-900",
+      accent: "text-amber-300",
         label: "GÜÇ / GÖMÜLÜ",
       }
     : isMobileProject
       ? {
-          background: "from-cyan-100 via-teal-50 to-slate-100",
-          accent: "text-cyan-800",
+          background: "from-cyan-950 via-teal-950 to-slate-900",
+          accent: "text-cyan-300",
           label: "MOBİL UYGULAMA",
         }
       : {
-          background: "from-sky-100 via-blue-50 to-slate-100",
-          accent: "text-blue-800",
+          background: "from-sky-950 via-blue-950 to-slate-900",
+          accent: "text-blue-300",
           label: "WEB PLATFORMU",
         };
 
   return (
-    <article className="group flex h-full min-w-0 flex-col overflow-hidden rounded-2xl border border-cyan-900/10 bg-white/90 shadow-[0_8px_30px_rgba(15,52,78,0.08)] transition-all duration-300 hover:-translate-y-1 hover:border-cyan-800/25 hover:shadow-[0_20px_45px_rgba(15,52,78,0.16)] sm:rounded-3xl sm:hover:-translate-y-1.5">
+    <article className="group flex h-full min-w-0 flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.055] shadow-[0_8px_30px_rgba(15,52,78,0.08)] transition-all duration-300 hover:-translate-y-1 hover:border-white/25 hover:shadow-[0_20px_45px_rgba(15,52,78,0.16)] sm:rounded-3xl sm:hover:-translate-y-1.5">
       <div
         className={`relative m-2.5 mb-0 flex h-36 items-center justify-center overflow-hidden rounded-xl bg-linear-to-br sm:m-3 sm:mb-0 sm:h-44 sm:rounded-2xl ${visualStyle.background}`}
       >
@@ -134,20 +133,20 @@ const ProjectCard = ({ project, onViewDetails }: ProjectCardProps) => {
           </span>
         </div>
         {project.featured && (
-          <span className="absolute right-3 top-3 rounded-full border border-white/70 bg-white/85 px-3 py-1 text-[10px] font-semibold tracking-wider text-neutral-700 shadow-sm backdrop-blur">
+          <span className="absolute right-3 top-3 rounded-full border border-white/10 bg-white/[0.055] px-3 py-1 text-[10px] font-semibold tracking-wider text-slate-300 shadow-sm backdrop-blur">
             ÖNE ÇIKAN
           </span>
         )}
       </div>
 
       <div className="flex flex-1 flex-col p-4 pt-3.5 sm:p-5 sm:pt-4">
-        <p className="text-[10px] font-semibold tracking-[0.18em] text-cyan-800">
+        <p className="text-[10px] font-semibold tracking-[0.18em] text-[#91b9bd]">
           {project.category}
         </p>
-        <h3 className="mt-2 text-xl font-semibold leading-snug tracking-tight text-neutral-900">
+        <h3 className="mt-2 text-xl font-semibold leading-snug tracking-tight text-slate-100">
           {project.title}
         </h3>
-        <p className="mt-2 flex-1 text-sm leading-relaxed text-neutral-600">
+        <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-300">
           {project.description}
         </p>
 
@@ -155,7 +154,7 @@ const ProjectCard = ({ project, onViewDetails }: ProjectCardProps) => {
           {project.technologies.slice(0, 3).map((technology) => (
             <li
               key={technology}
-              className="rounded-full border border-cyan-900/10 bg-cyan-50/70 px-2.5 py-1 text-xs text-cyan-950"
+              className="rounded-full border border-white/10 bg-[#7fc2d4]/10 px-2.5 py-1 text-xs text-[#91b9bd]"
             >
               {technology}
             </li>
@@ -167,11 +166,11 @@ const ProjectCard = ({ project, onViewDetails }: ProjectCardProps) => {
           )}
         </ul>
 
-        <footer className="mt-5 border-t border-neutral-200 pt-4">
+        <footer className="mt-5 border-t border-white/10 pt-4">
           <button
             type="button"
             onClick={onViewDetails}
-            className="inline-flex items-center gap-2 text-sm font-semibold text-neutral-900 transition-colors hover:text-neutral-500 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-neutral-800"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-slate-100 transition-colors hover:text-slate-400 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-slate-300"
           >
             Detayları gör
             <ArrowUpRight
@@ -210,7 +209,7 @@ const ProjectDetailsModal = ({
       <section
         aria-labelledby="project-dialog-title"
         aria-modal="true"
-        className="relative max-h-[calc(100dvh-2rem-env(safe-area-inset-top)-env(safe-area-inset-bottom))] w-full max-w-3xl overflow-y-auto rounded-2xl border border-white/70 bg-white p-5 shadow-2xl sm:max-h-[min(85dvh,800px)] sm:rounded-3xl sm:p-9"
+        className="relative max-h-[calc(100dvh-2rem-env(safe-area-inset-top)-env(safe-area-inset-bottom))] w-full max-w-3xl overflow-y-auto rounded-2xl border border-white/10 bg-white/[0.055] p-5 shadow-2xl sm:max-h-[min(85dvh,800px)] sm:rounded-3xl sm:p-9"
         role="dialog"
       >
         <button
@@ -218,12 +217,12 @@ const ProjectDetailsModal = ({
           onClick={onClose}
           aria-label="Proje detaylarını kapat"
           autoFocus
-          className="absolute right-5 top-5 rounded-full p-2 text-neutral-500 transition-colors hover:bg-neutral-100 hover:text-neutral-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-800"
+          className="absolute right-5 top-5 rounded-full p-2 text-slate-400 transition-colors hover:bg-[#20242b] hover:text-slate-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-300"
         >
           <X size={20} aria-hidden="true" />
         </button>
 
-        <p className="pr-12 text-xs font-semibold tracking-[0.2em] text-neutral-500">
+        <p className="pr-12 text-xs font-semibold tracking-[0.2em] text-slate-400">
           {project.number} / {project.category}
         </p>
         <h2
@@ -232,7 +231,7 @@ const ProjectDetailsModal = ({
         >
           {project.title}
         </h2>
-        <p className="mt-3 max-w-2xl leading-relaxed text-neutral-600">
+        <p className="mt-3 max-w-2xl leading-relaxed text-slate-300">
           {project.overview}
         </p>
 
@@ -249,11 +248,11 @@ const ProjectDetailsModal = ({
             {project.features.map((feature) => (
               <li
                 key={feature}
-                className="flex items-start gap-2 text-sm text-neutral-600"
+                className="flex items-start gap-2 text-sm text-slate-300"
               >
                 <span
                   aria-hidden="true"
-                  className="mt-1.5 size-1.5 shrink-0 rounded-full bg-neutral-400"
+                  className="mt-1.5 size-1.5 shrink-0 rounded-full bg-slate-500"
                 />
                 {feature}
               </li>
@@ -261,13 +260,13 @@ const ProjectDetailsModal = ({
           </ul>
         </div>
 
-        <div className="mt-8 border-t border-neutral-200 pt-6">
+        <div className="mt-8 border-t border-white/10 pt-6">
           <h3 className="text-sm font-semibold">Teknolojiler</h3>
           <ul className="mt-3 flex flex-wrap gap-2">
             {project.technologies.map((technology) => (
               <li
                 key={technology}
-                className="rounded-full border border-neutral-200 px-3 py-1.5 text-xs text-neutral-600"
+                className="rounded-full border border-white/10 px-3 py-1.5 text-xs text-slate-300"
               >
                 {technology}
               </li>
@@ -280,7 +279,7 @@ const ProjectDetailsModal = ({
             href={project.github}
             target="_blank"
             rel="noreferrer"
-            className="mt-8 inline-flex items-center gap-2 rounded-full bg-neutral-900 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-neutral-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-neutral-800"
+            className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#10141b] px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#344950] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-slate-300"
           >
             GitHub'da görüntüle
             <ExternalLink size={14} aria-hidden="true" />
@@ -303,6 +302,6 @@ interface DetailSectionProps {
 const DetailSection = ({ title, content }: DetailSectionProps) => (
   <div>
     <h3 className="text-sm font-semibold">{title}</h3>
-    <p className="mt-2 text-sm leading-relaxed text-neutral-600">{content}</p>
+    <p className="mt-2 text-sm leading-relaxed text-slate-300">{content}</p>
   </div>
 );
