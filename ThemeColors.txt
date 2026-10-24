@@ -1,53 +1,52 @@
 Portfolio Color Theme
 =====================
 
-Theme: Cool technical blue with cyan and restrained amber accents.
+Theme: Charcoal graphite with muted teal, blue and restrained amber accents.
 
 Core colors
 -----------
 Color           Hex         Tailwind class                 Usage
-Deep navy       #12243A   text-[#12243a] / bg-[#12243a]  Primary text and strong contrast
-Cyan            #0E7490   text-cyan-700 / bg-cyan-700    Main accent, labels, links, navigation
-Cyan dark       #155E75   text-cyan-800 / bg-cyan-800    Strong accent text and controls
-Blue            #2563EB   text-blue-600 / bg-blue-600    Secondary technology accent
-Amber           #D97706   text-amber-600 / bg-amber-600  Warm highlight and hover accent
-Slate           #475569   text-slate-600 / bg-slate-600  Supporting text
-Page background #EDF4F8   bg-[#edf4f8]                   Main page background
+Near black      #050505   bg-[#050505]                   Main page background
+Graphite        #14181F   bg-[#14181f]                   Glass panels and cards
+Primary text    #E8EDF2   text-slate-100                Headings and primary copy
+Muted text      #A1AAB5   text-slate-400                Supporting text
+Muted teal      #7FC2D4   text-[#7fc2d4]                Logo and primary accent
+Blue            #A7BADE   text-blue-300                 Secondary technology accent
+Amber           #D9B486   text-[#d9b486]                Restrained highlight and hover accent
 
 Panel and surface colors
 ------------------------
-Panel gradient (CSS; arbitrary Tailwind values recommended):
-  from-[rgba(255,255,255,0.88)]
-  via-[rgba(238,246,251,0.80)]
-  to-[rgba(248,250,252,0.84)]
+Panel gradient (CSS):
+  from-[rgba(20,24,31,0.90)]
+  via-[rgba(11,14,20,0.88)]
+  to-[rgba(19,19,27,0.90)]
 
-Soft cyan surface #ECFEFF  bg-cyan-50
-White surface     #FFFFFF  bg-white
-Soft sky surface  #F0F9FF  bg-sky-50
-Subtle border     rgba(8, 51, 68, 0.10)  border-cyan-950/10
+Soft teal surface rgba(127,194,212,0.10)
+Card surface      rgba(255,255,255,0.055)
+Subtle border     rgba(226,232,240,0.12)
 
 Background glow
 ---------------
 Color       CSS value                    Tailwind arbitrary value
-Cyan glow   rgba(103, 203, 211, 0.30)    bg-[rgba(103,203,211,0.30)]
-Blue glow   rgba(122, 164, 221, 0.28)    bg-[rgba(122,164,221,0.28)]
-Violet glow rgba(169, 157, 222, 0.20)    bg-[rgba(169,157,222,0.20)]
-Amber glow  rgba(242, 190, 117, 0.18)    bg-[rgba(242,190,117,0.18)]
+Teal glow   rgba(32, 73, 76, 0.30)
+Navy glow   rgba(19, 36, 61, 0.28)
+Violet glow rgba(34, 26, 67, 0.20)
+Amber glow  rgba(70, 51, 25, 0.18)
 
 Tailwind utility patterns
 -------------------------
-Primary heading:  text-[#12243a]
-Accent label:     text-cyan-800
-Accent button:    bg-cyan-800 text-white hover:bg-cyan-700
-Warm hover:       hover:text-amber-600
-Soft card:        border border-cyan-950/10 bg-white/80
-Panel glass:      border border-white/80 bg-white/80 backdrop-blur-xl
-Muted copy:       text-slate-600
+Primary heading:  text-slate-100
+Accent label:     text-[#91b9bd]
+Accent button:    bg-[#426f74] text-white hover:bg-[#54858a]
+Warm hover:       hover:text-[#d9b486]
+Soft card:        border border-white/10 bg-white/[0.055]
+Panel glass:      border border-white/10 bg-[#14181f]/90 backdrop-blur-xl
+Muted copy:       text-slate-400
 
 Usage guidance
 --------------
-- Use deep navy for primary headings and readable body copy.
-- Use cyan for interactive elements, section labels and active navigation.
+- Use near-white for primary headings and readable body copy.
+- Use muted teal for interactive elements, section labels and active navigation.
 - Reserve amber for small highlights and hover states.
-- Keep large surfaces light and translucent; use the gradient glows sparingly.
+- Keep large surfaces dark and translucent; use the gradient glows sparingly.
 - Use slate for secondary copy and supporting labels.
