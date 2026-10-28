@@ -11,12 +11,12 @@ const ContactSection = () => {
       <section className="my-auto mx-auto flex w-full max-w-7xl flex-col gap-6 py-4 sm:gap-8 md:gap-10">
         <aside className="flex flex-col items-center justify-center">
           <article className="w-full min-w-0 md:w-auto md:flex-1 md:basis-0">
-            <p className="mt-4 max-w-[60ch] text-base leading-relaxed text-slate-300 sm:mt-5 sm:text-lg">
+            <p className="mt-4 max-w-[60ch] text-base leading-relaxed text-[#6e6e73] sm:mt-5 sm:text-lg">
               Yeni fırsatlar ve iş birlikleri için her zaman açıktım. Proje
               fikirleri, ortaklıklar veya sadece merhaba demek isteyenler için
               benimle iletişime geçebilirsiniz. Sizden haber almak isterim!
             </p>
-            <div className="my-2 flex items-center justify-center gap-4 border-t border-white/15 py-2">
+            <div className="my-2 flex items-center justify-center gap-4 border-t border-[#d2d2d7] py-2">
               <a href="" className="p-3 font-bold">
                 <img
                   src={`${import.meta.env.BASE_URL}png/LI-In-Bug.png`}
@@ -40,18 +40,18 @@ const ContactSection = () => {
               </a>
               <a
                 href=""
-                className="rounded border-2 border-[#7fc2d4]/40 p-1 font-bold text-[#91b9bd]"
+                className="rounded border-2 border-[#0071e3]/40 p-1 font-bold text-[#0071e3]"
               ></a>
             </div>
           </article>
 
-          <article className="w-full min-w-0 rounded-2xl border border-white/10 bg-[#151920] p-5 shadow-[0_12px_36px_rgba(0,0,0,0.3)] transition-shadow duration-300 hover:shadow-[0_18px_48px_rgba(0,0,0,0.45)] sm:rounded-3xl sm:p-7 md:w-auto md:flex-1 md:basis-0 lg:p-8">
+          <article className="w-full min-w-0 rounded-2xl border border-[#d2d2d7] bg-white/70 hover:bg-white/90 p-5 shadow-sm shadow-black/5 transition-shadow duration-300 hover:shadow-md sm:rounded-3xl sm:p-7 md:w-auto md:flex-1 md:basis-0 lg:p-8">
             <div className="grid gap-5 sm:grid-cols-2 sm:gap-6">
               <div>
-                <h3 className="font-mono text-[11px] font-semibold tracking-[0.16em] text-[#91b9bd]">
+                <h3 className="font-mono text-[11px] font-semibold tracking-[0.16em] text-[#0071e3]">
                   E-POSTA
                 </h3>
-                <p className="mt-2 text-sm font-medium text-slate-100 sm:text-base">
+                <p className="mt-2 text-sm font-medium text-[#1d1d1f] sm:text-base">
                   <a
                     href="mailto:serdarcayan.sc@gmail.com"
                     className="hover:underline"
@@ -62,10 +62,10 @@ const ContactSection = () => {
               </div>
 
               <div>
-                <h3 className="font-mono text-[11px] font-semibold tracking-[0.16em] text-[#91b9bd]">
+                <h3 className="font-mono text-[11px] font-semibold tracking-[0.16em] text-[#0071e3]">
                   TELEFON
                 </h3>
-                <p className="mt-2 text-sm font-medium text-slate-100 sm:text-base">
+                <p className="mt-2 text-sm font-medium text-[#1d1d1f] sm:text-base">
                   <a href="tel:+905555555555" className="hover:underline">
                     +90 555 555 55 55
                   </a>
@@ -73,10 +73,10 @@ const ContactSection = () => {
               </div>
 
               <div className="sm:col-span-2">
-                <h3 className="font-mono text-[11px] font-semibold tracking-[0.16em] text-[#91b9bd]">
+                <h3 className="font-mono text-[11px] font-semibold tracking-[0.16em] text-[#0071e3]">
                   KONUM
                 </h3>
-                <p className="mt-2 text-sm font-medium text-slate-100 sm:text-base">
+                <p className="mt-2 text-sm font-medium text-[#1d1d1f] sm:text-base">
                   Çiğli, İzmir, Türkiye
                 </p>
                 <div className="mt-3">
@@ -97,8 +97,8 @@ const ContactSection = () => {
         <section></section>
       </section>
       <footer className="w-full">
-        <div className="w-full max-w-7xl m-auto flex items-center gap-4 border-t border-white/15 p-2">
-          <p className="text-sm text-slate-400 whitespace-nowrap">
+        <div className="w-full max-w-7xl m-auto flex items-center gap-4 border-t border-[#d2d2d7] p-2">
+          <p className="text-sm text-[#6e6e73] whitespace-nowrap">
             Altyapısında
           </p>
           <div className="flex items-center gap-4">

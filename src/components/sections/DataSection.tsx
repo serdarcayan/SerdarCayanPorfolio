@@ -33,8 +33,8 @@ const formatChange = (value: number) => {
 
 const getChangeClass = (value: number) => {
   if (value > 0) return "text-emerald-600";
-  if (value < 0) return "text-red-500";
-  return "text-slate-400";
+  if (value < 0) return "text-red-700";
+  return "text-[#6e6e73]";
 };
 
 const getDeviceTotal = (devices: AnalyticsData["audience"]["devices"]) => {
@@ -336,7 +336,7 @@ const DataSection = () => {
         hasHeader={false}
         hasJourney={false}
       >
-        <div className="flex h-full w-full items-center justify-center text-sm text-slate-400">
+        <div className="flex h-full w-full items-center justify-center text-sm text-[#6e6e73]">
           Analitikler yükleniyor...
         </div>
       </SectionTemplate>
@@ -368,10 +368,10 @@ const DataSection = () => {
             {/* OVERVIEW                                                         */}
             {/* ---------------------------------------------------------------- */}
 
-            <article className="flex min-h-40 basis-[97%] shrink-0 snap-center flex-col overflow-hidden rounded-lg border border-white/10 bg-[#151920] p-3 shadow-md sm:rounded-xl sm:p-5 overflow-y-auto">
+            <article className="flex min-h-40 basis-[97%] shrink-0 snap-center flex-col overflow-hidden rounded-lg border border-[#d2d2d7] bg-white/70 hover:bg-white/90 p-3 shadow-md sm:rounded-xl sm:p-5 overflow-y-auto">
               <div className="flex shrink-0 items-start justify-between gap-3">
                 <div className="min-w-0">
-                  <p className="text-[8px] font-semibold uppercase tracking-[0.2em] text-slate-400 sm:text-[9px]">
+                  <p className="text-[8px] font-semibold uppercase tracking-[0.2em] text-[#6e6e73] sm:text-[9px]">
                     Genel bakış
                   </p>
 
@@ -380,15 +380,15 @@ const DataSection = () => {
                   </h4>
                 </div>
 
-                <div className="flex shrink-0 items-center gap-1.5 rounded-full bg-[#10141b] px-2.5 py-1 text-[8px] font-semibold text-white sm:px-3 sm:text-[9px]">
+                <div className="flex shrink-0 items-center gap-1.5 rounded-full bg-white/70 hover:bg-white/90 px-2.5 py-1 text-[8px] font-semibold text-white sm:px-3 sm:text-[9px]">
                   <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-400" />
                   CANLI
                 </div>
               </div>
 
               <div className="mt-3 grid min-h-0 flex-1 grid-cols-2 gap-2 sm:mt-4 sm:grid-cols-4 sm:gap-3">
-                <div className="rounded-lg border border-white/10 bg-white/[0.055] p-2.5 sm:rounded-xl sm:p-3">
-                  <p className="text-[8px] uppercase tracking-wider text-slate-400 sm:text-[9px]">
+                <div className="rounded-lg border border-[#d2d2d7] bg-white/70 hover:bg-white/90 p-2.5 sm:rounded-xl sm:p-3">
+                  <p className="text-[8px] uppercase tracking-wider text-[#6e6e73] sm:text-[9px]">
                     Ziyaretçiler
                   </p>
 
@@ -405,8 +405,8 @@ const DataSection = () => {
                   </p>
                 </div>
 
-                <div className="rounded-lg border border-white/10 bg-white/[0.055] p-2.5 sm:rounded-xl sm:p-3">
-                  <p className="text-[8px] uppercase tracking-wider text-slate-400 sm:text-[9px]">
+                <div className="rounded-lg border border-[#d2d2d7] bg-white/70 hover:bg-white/90 p-2.5 sm:rounded-xl sm:p-3">
+                  <p className="text-[8px] uppercase tracking-wider text-[#6e6e73] sm:text-[9px]">
                     Oturumlar
                   </p>
 
@@ -423,8 +423,8 @@ const DataSection = () => {
                   </p>
                 </div>
 
-                <div className="rounded-lg border border-white/10 bg-white/[0.055] p-2.5 sm:rounded-xl sm:p-3">
-                  <p className="text-[8px] uppercase tracking-wider text-slate-400 sm:text-[9px]">
+                <div className="rounded-lg border border-[#d2d2d7] bg-white/70 hover:bg-white/90 p-2.5 sm:rounded-xl sm:p-3">
+                  <p className="text-[8px] uppercase tracking-wider text-[#6e6e73] sm:text-[9px]">
                     Ort. Oturum
                   </p>
 
@@ -442,8 +442,8 @@ const DataSection = () => {
                   </p>
                 </div>
 
-                <div className="rounded-lg border border-white/10 bg-white/[0.055] p-2.5 sm:rounded-xl sm:p-3">
-                  <p className="text-[8px] uppercase tracking-wider text-slate-400 sm:text-[9px]">
+                <div className="rounded-lg border border-[#d2d2d7] bg-white/70 hover:bg-white/90 p-2.5 sm:rounded-xl sm:p-3">
+                  <p className="text-[8px] uppercase tracking-wider text-[#6e6e73] sm:text-[9px]">
                     Şu an canlı
                   </p>
 
@@ -455,18 +455,18 @@ const DataSection = () => {
                     </p>
                   </div>
 
-                  <p className="mt-0.5 text-[8px] text-slate-400 sm:text-[9px]">
+                  <p className="mt-0.5 text-[8px] text-[#6e6e73] sm:text-[9px]">
                     aktif
                   </p>
                 </div>
 
-                <div className="col-span-2 min-h-28 rounded-lg border border-white/10 bg-white/[0.055] p-2.5 sm:min-h-32 sm:rounded-xl sm:p-3 md:col-span-3">
+                <div className="col-span-2 min-h-28 rounded-lg border border-[#d2d2d7] bg-white/70 hover:bg-white/90 p-2.5 sm:min-h-32 sm:rounded-xl sm:p-3 md:col-span-3">
                   <div className="flex items-center justify-between">
-                    <p className="text-[8px] font-semibold uppercase tracking-wider text-slate-400 sm:text-[9px]">
+                    <p className="text-[8px] font-semibold uppercase tracking-wider text-[#6e6e73] sm:text-[9px]">
                       Ziyaretçiler · 7 gün
                     </p>
 
-                    <span className="text-[8px] text-slate-400 sm:text-[9px]">
+                    <span className="text-[8px] text-[#6e6e73] sm:text-[9px]">
                       {formatNumber(overview.visitors)}
                     </span>
                   </div>
@@ -527,15 +527,15 @@ const DataSection = () => {
                         )}
                       </svg>
                     ) : (
-                      <div className="flex h-full items-center justify-center text-[9px] text-slate-400">
+                      <div className="flex h-full items-center justify-center text-[9px] text-[#6e6e73]">
                         Ziyaretçi eğilim verisi yok
                       </div>
                     )}
                   </div>
                 </div>
 
-                <div className="col-span-2 min-h-28 rounded-lg bg-[#10141b] p-3 text-white sm:min-h-32 sm:rounded-xl sm:p-4 md:col-span-1">
-                  <p className="text-[8px] uppercase tracking-wider text-slate-400 sm:text-[9px]">
+                <div className="col-span-2 min-h-28 rounded-lg bg-white/70 hover:bg-white/90 p-3 text-white sm:min-h-32 sm:rounded-xl sm:p-4 md:col-span-1">
+                  <p className="text-[8px] uppercase tracking-wider text-[#6e6e73] sm:text-[9px]">
                     Geri dönen ziyaretçiler
                   </p>
 
@@ -545,9 +545,9 @@ const DataSection = () => {
                     </p>
                   </div>
 
-                  <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-[#292e36]">
+                  <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-white/80">
                     <div
-                      className="h-full rounded-full bg-white/[0.055] transition-all duration-500"
+                      className="h-full rounded-full bg-white/70 hover:bg-white/90 transition-all duration-500"
                       style={{
                         width: `${Math.min(
                           100,
@@ -557,7 +557,7 @@ const DataSection = () => {
                     />
                   </div>
 
-                  <div className="mt-1.5 flex justify-between text-[7px] text-slate-400 sm:text-[8px]">
+                  <div className="mt-1.5 flex justify-between text-[7px] text-[#6e6e73] sm:text-[8px]">
                     <span>
                       Yeni {Math.max(0, 100 - overview.returningVisitors)}%
                     </span>
@@ -572,10 +572,10 @@ const DataSection = () => {
             {/* AUDIENCE                                                         */}
             {/* ---------------------------------------------------------------- */}
 
-            <article className="flex min-h-40 basis-[97%] shrink-0 snap-center flex-col overflow-hidden rounded-lg border border-white/10 bg-[#151920] p-3 shadow-md sm:rounded-xl sm:p-5 overflow-y-auto">
+            <article className="flex min-h-40 basis-[97%] shrink-0 snap-center flex-col overflow-hidden rounded-lg border border-[#d2d2d7] bg-white/70 hover:bg-white/90 p-3 shadow-md sm:rounded-xl sm:p-5 overflow-y-auto">
               <div className="flex shrink-0 items-start justify-between gap-3">
                 <div className="min-w-0">
-                  <p className="text-[8px] font-semibold uppercase tracking-[0.2em] text-slate-400 sm:text-[9px]">
+                  <p className="text-[8px] font-semibold uppercase tracking-[0.2em] text-[#6e6e73] sm:text-[9px]">
                     Kitle
                   </p>
 
@@ -584,19 +584,19 @@ const DataSection = () => {
                   </h4>
                 </div>
 
-                <span className="shrink-0 text-[7px] uppercase tracking-wider text-slate-400 sm:text-[9px]">
+                <span className="shrink-0 text-[7px] uppercase tracking-wider text-[#6e6e73] sm:text-[9px]">
                   30 gün
                 </span>
               </div>
 
               <div className="mt-3 grid min-h-0 flex-1 grid-cols-1 gap-2 sm:mt-4 sm:grid-cols-2 sm:gap-3 lg:grid-cols-3">
-                <div className="rounded-lg border border-white/10 bg-white/[0.055] p-3 sm:rounded-xl sm:p-4">
+                <div className="rounded-lg border border-[#d2d2d7] bg-white/70 hover:bg-white/90 p-3 sm:rounded-xl sm:p-4">
                   <div className="flex items-center justify-between">
-                    <p className="text-[8px] font-semibold uppercase tracking-wider text-slate-400 sm:text-[9px]">
+                    <p className="text-[8px] font-semibold uppercase tracking-wider text-[#6e6e73] sm:text-[9px]">
                       Cihazlar
                     </p>
 
-                    <span className="text-[8px] text-slate-400">
+                    <span className="text-[8px] text-[#6e6e73]">
                       {formatNumber(deviceTotal)}
                     </span>
                   </div>
@@ -612,12 +612,12 @@ const DataSection = () => {
                           )`,
                       }}
                     >
-                      <div className="flex h-18 w-18 flex-col items-center justify-center rounded-full bg-[#7fc2d4]/10 sm:h-20 sm:w-20">
-                        <span className="text-lg font-bold text-[#a7bade] sm:text-xl">
+                      <div className="flex h-18 w-18 flex-col items-center justify-center rounded-full bg-[#0071e3]/10 sm:h-20 sm:w-20">
+                        <span className="text-lg font-bold text-[#0071e3] sm:text-xl">
                           {desktopPercentage}%
                         </span>
 
-                        <span className="text-[7px] uppercase tracking-wider text-[#a7bade] sm:text-[8px]">
+                        <span className="text-[7px] uppercase tracking-wider text-[#0071e3] sm:text-[8px]">
                           Masaüstü
                         </span>
                       </div>
@@ -625,34 +625,34 @@ const DataSection = () => {
                   </div>
 
                   <div className="mt-3 grid grid-cols-3 gap-1.5 sm:mt-4 sm:gap-2">
-                    <div className="rounded-md bg-[#a7bade]/10 p-1.5 text-center">
+                    <div className="rounded-md bg-blue-600/10 p-1.5 text-center">
                       <p className="text-[9px] font-bold sm:text-[10px]">
                         {desktopPercentage}%
                       </p>
 
-                      <p className="text-[7px] text-[#a7bade]">Masaüstü</p>
+                      <p className="text-[7px] text-[#0071e3]">Masaüstü</p>
                     </div>
 
-                    <div className="rounded-md bg-[#7fc2d4]/10 p-1.5 text-center">
+                    <div className="rounded-md bg-[#0071e3]/10 p-1.5 text-center">
                       <p className="text-[9px] font-bold sm:text-[10px]">
                         {mobilePercentage}%
                       </p>
 
-                      <p className="text-[7px] text-[#91b9bd]">Mobil</p>
+                      <p className="text-[7px] text-[#0071e3]">Mobil</p>
                     </div>
 
-                    <div className="rounded-md bg-[#d9b486]/10 p-1.5 text-center">
+                    <div className="rounded-md bg-amber-700/10 p-1.5 text-center">
                       <p className="text-[9px] font-bold sm:text-[10px]">
                         {tabletPercentage}%
                       </p>
 
-                      <p className="text-[7px] text-[#d9b486]">Tablet</p>
+                      <p className="text-[7px] text-amber-700">Tablet</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="rounded-lg border border-white/10 bg-white/[0.055] p-3 sm:rounded-xl sm:p-4">
-                  <p className="text-[8px] font-semibold uppercase tracking-wider text-slate-400 sm:text-[9px]">
+                <div className="rounded-lg border border-[#d2d2d7] bg-white/70 hover:bg-white/90 p-3 sm:rounded-xl sm:p-4">
+                  <p className="text-[8px] font-semibold uppercase tracking-wider text-[#6e6e73] sm:text-[9px]">
                     Bölgeler
                   </p>
 
@@ -670,9 +670,9 @@ const DataSection = () => {
                               </span>
                             </div>
 
-                            <div className="h-1.5 overflow-hidden rounded-full bg-[#292e36]">
+                            <div className="h-1.5 overflow-hidden rounded-full bg-white/80">
                               <div
-                                className="h-full rounded-full bg-[#263c43] transition-all duration-500"
+                                className="h-full rounded-full bg-white/80 transition-all duration-500"
                                 style={{
                                   width: `${Math.min(
                                     100,
@@ -684,21 +684,21 @@ const DataSection = () => {
                           </div>
                         ))
                     ) : (
-                      <p className="text-[9px] text-slate-400">
+                      <p className="text-[9px] text-[#6e6e73]">
                         Bölge verisi yok
                       </p>
                     )}
                   </div>
                 </div>
 
-                <div className="rounded-lg border border-white/10 bg-white/[0.055] p-3 sm:rounded-xl sm:p-4">
-                  <p className="text-[8px] font-semibold uppercase tracking-wider text-slate-400 sm:text-[9px]">
+                <div className="rounded-lg border border-[#d2d2d7] bg-white/70 hover:bg-white/90 p-3 sm:rounded-xl sm:p-4">
+                  <p className="text-[8px] font-semibold uppercase tracking-wider text-[#6e6e73] sm:text-[9px]">
                     Teknoloji
                   </p>
 
                   <div className="mt-3 grid grid-cols-2 gap-2 sm:mt-4">
-                    <div className="rounded-lg bg-[#20242b] p-2.5 sm:p-3">
-                      <p className="text-[7px] uppercase tracking-wider text-slate-400">
+                    <div className="rounded-lg bg-white/70 hover:bg-white/90 p-2.5 sm:p-3">
+                      <p className="text-[7px] uppercase tracking-wider text-[#6e6e73]">
                         Tarayıcı
                       </p>
 
@@ -706,13 +706,13 @@ const DataSection = () => {
                         {audience.technology.browser.name}
                       </p>
 
-                      <p className="text-[8px] text-slate-400">
+                      <p className="text-[8px] text-[#6e6e73]">
                         {audience.technology.browser.percentage}%
                       </p>
                     </div>
 
-                    <div className="rounded-lg bg-[#20242b] p-2.5 sm:p-3">
-                      <p className="text-[7px] uppercase tracking-wider text-slate-400">
+                    <div className="rounded-lg bg-white/70 hover:bg-white/90 p-2.5 sm:p-3">
+                      <p className="text-[7px] uppercase tracking-wider text-[#6e6e73]">
                         İS
                       </p>
 
@@ -720,13 +720,13 @@ const DataSection = () => {
                         {audience.technology.os.name}
                       </p>
 
-                      <p className="text-[8px] text-slate-400">
+                      <p className="text-[8px] text-[#6e6e73]">
                         {audience.technology.os.percentage}%
                       </p>
                     </div>
 
-                    <div className="rounded-lg bg-[#20242b] p-2.5 sm:p-3">
-                      <p className="text-[7px] uppercase tracking-wider text-slate-400">
+                    <div className="rounded-lg bg-white/70 hover:bg-white/90 p-2.5 sm:p-3">
+                      <p className="text-[7px] uppercase tracking-wider text-[#6e6e73]">
                         Çözünürlük
                       </p>
 
@@ -734,13 +734,13 @@ const DataSection = () => {
                         {audience.technology.resolution.name}
                       </p>
 
-                      <p className="text-[8px] text-slate-400">
+                      <p className="text-[8px] text-[#6e6e73]">
                         {audience.technology.resolution.percentage}%
                       </p>
                     </div>
 
-                    <div className="rounded-lg bg-[#20242b] p-2.5 sm:p-3">
-                      <p className="text-[7px] uppercase tracking-wider text-slate-400">
+                    <div className="rounded-lg bg-white/70 hover:bg-white/90 p-2.5 sm:p-3">
+                      <p className="text-[7px] uppercase tracking-wider text-[#6e6e73]">
                         Dil
                       </p>
 
@@ -748,7 +748,7 @@ const DataSection = () => {
                         {audience.technology.language.name}
                       </p>
 
-                      <p className="text-[8px] text-slate-400">
+                      <p className="text-[8px] text-[#6e6e73]">
                         {audience.technology.language.percentage}%
                       </p>
                     </div>
@@ -761,10 +761,10 @@ const DataSection = () => {
             {/* ACQUISITION                                                      */}
             {/* ---------------------------------------------------------------- */}
 
-            <article className="flex min-h-40 basis-[97%] shrink-0 snap-center flex-col overflow-hidden rounded-lg border border-white/10 bg-[#151920] p-3 shadow-md sm:rounded-xl sm:p-5 overflow-y-auto">
+            <article className="flex min-h-40 basis-[97%] shrink-0 snap-center flex-col overflow-hidden rounded-lg border border-[#d2d2d7] bg-white/70 hover:bg-white/90 p-3 shadow-md sm:rounded-xl sm:p-5 overflow-y-auto">
               <div className="flex shrink-0 items-start justify-between gap-3">
                 <div className="min-w-0">
-                  <p className="text-[8px] font-semibold uppercase tracking-[0.2em] text-slate-400 sm:text-[9px]">
+                  <p className="text-[8px] font-semibold uppercase tracking-[0.2em] text-[#6e6e73] sm:text-[9px]">
                     Kazanım
                   </p>
 
@@ -773,19 +773,19 @@ const DataSection = () => {
                   </h4>
                 </div>
 
-                <span className="shrink-0 rounded-full bg-[#292e36] px-2 py-1 text-[7px] text-slate-300 sm:px-3 sm:text-[9px]">
+                <span className="shrink-0 rounded-full bg-white/80 px-2 py-1 text-[7px] text-[#6e6e73] sm:px-3 sm:text-[9px]">
                   {formatNumber(overview.visitors)} ziyaretçi
                 </span>
               </div>
 
               <div className="mt-3 grid min-h-0 flex-1 grid-cols-1 gap-2 sm:mt-4 sm:grid-cols-2 sm:gap-3">
-                <div className="rounded-lg border border-white/10 bg-white/[0.055] p-3 sm:rounded-xl sm:p-4">
+                <div className="rounded-lg border border-[#d2d2d7] bg-white/70 hover:bg-white/90 p-3 sm:rounded-xl sm:p-4">
                   <div className="flex items-center justify-between">
-                    <p className="text-[8px] font-semibold uppercase tracking-wider text-slate-400 sm:text-[9px]">
+                    <p className="text-[8px] font-semibold uppercase tracking-wider text-[#6e6e73] sm:text-[9px]">
                       Kaynaklar
                     </p>
 
-                    <span className="text-[8px] text-slate-400">
+                    <span className="text-[8px] text-[#6e6e73]">
                       Paylaşım
                     </span>
                   </div>
@@ -801,14 +801,14 @@ const DataSection = () => {
                                 {name}
                               </span>
 
-                              <span className="text-[8px] font-semibold text-slate-400 sm:text-[10px]">
+                              <span className="text-[8px] font-semibold text-[#6e6e73] sm:text-[10px]">
                                 {percentage}%
                               </span>
                             </div>
 
-                            <div className="h-2 overflow-hidden rounded-full bg-[#292e36]">
+                            <div className="h-2 overflow-hidden rounded-full bg-white/80">
                               <div
-                                className="h-full rounded-full bg-[#10141b] transition-all duration-500"
+                                className="h-full rounded-full bg-white/70 hover:bg-white/90 transition-all duration-500"
                                 style={{
                                   width: `${Math.min(
                                     100,
@@ -820,7 +820,7 @@ const DataSection = () => {
                           </div>
                         ))
                     ) : (
-                      <p className="text-[9px] text-slate-400">
+                      <p className="text-[9px] text-[#6e6e73]">
                         Trafik kaynağı verisi yok
                       </p>
                     )}
@@ -828,8 +828,8 @@ const DataSection = () => {
                 </div>
 
                 <div className="grid grid-cols-2 gap-2 sm:gap-3">
-                  <div className="rounded-lg border border-white/10 bg-white/[0.055] p-3 sm:rounded-xl sm:p-4">
-                    <p className="text-[8px] uppercase tracking-wider text-slate-400">
+                  <div className="rounded-lg border border-[#d2d2d7] bg-white/70 hover:bg-white/90 p-3 sm:rounded-xl sm:p-4">
+                    <p className="text-[8px] uppercase tracking-wider text-[#6e6e73]">
                       Yeni kullanıcılar
                     </p>
 
@@ -841,7 +841,7 @@ const DataSection = () => {
                       {acquisition.newUsersTrend.map((value, index) => (
                         <div
                           key={index}
-                          className="flex-1 rounded-t bg-[#263c43]/80 transition-all duration-500"
+                          className="flex-1 rounded-t bg-white/80 transition-all duration-500"
                           style={{
                             height: `${Math.max(
                               2,
@@ -853,8 +853,8 @@ const DataSection = () => {
                     </div>
                   </div>
 
-                  <div className="rounded-lg border border-white/10 bg-white/[0.055] p-3 sm:rounded-xl sm:p-4">
-                    <p className="text-[8px] uppercase tracking-wider text-slate-400">
+                  <div className="rounded-lg border border-[#d2d2d7] bg-white/70 hover:bg-white/90 p-3 sm:rounded-xl sm:p-4">
+                    <p className="text-[8px] uppercase tracking-wider text-[#6e6e73]">
                       Etkileşim
                     </p>
 
@@ -862,9 +862,9 @@ const DataSection = () => {
                       {acquisition.engagementRate.toFixed(1)}%
                     </p>
 
-                    <div className="mt-3 h-2 overflow-hidden rounded-full bg-[#292e36]">
+                    <div className="mt-3 h-2 overflow-hidden rounded-full bg-white/80">
                       <div
-                        className="h-full rounded-full bg-[#10141b] transition-all duration-500"
+                        className="h-full rounded-full bg-white/70 hover:bg-white/90 transition-all duration-500"
                         style={{
                           width: `${Math.min(
                             100,
@@ -884,10 +884,10 @@ const DataSection = () => {
                     </p>
                   </div>
 
-                  <div className="col-span-2 rounded-lg bg-[#10141b] p-3 text-white sm:rounded-xl sm:p-4">
+                  <div className="col-span-2 rounded-lg bg-white/70 hover:bg-white/90 p-3 text-white sm:rounded-xl sm:p-4">
                     <div className="flex items-center justify-between gap-3">
                       <div className="min-w-0">
-                        <p className="text-[7px] uppercase tracking-[0.18em] text-slate-400 sm:text-[9px]">
+                        <p className="text-[7px] uppercase tracking-[0.18em] text-[#6e6e73] sm:text-[9px]">
                           En iyi yönlendirme
                         </p>
 
@@ -903,7 +903,7 @@ const DataSection = () => {
                           )}
                         </p>
 
-                        <p className="text-[7px] uppercase tracking-wider text-slate-400">
+                        <p className="text-[7px] uppercase tracking-wider text-[#6e6e73]">
                           ort. oturum
                         </p>
                       </div>
@@ -917,10 +917,10 @@ const DataSection = () => {
             {/* CONTENT                                                          */}
             {/* ---------------------------------------------------------------- */}
 
-            <article className="flex min-h-40 basis-[97%] shrink-0 snap-center flex-col overflow-hidden rounded-lg border border-white/10 bg-[#151920] p-3 shadow-md sm:rounded-xl sm:p-5 overflow-y-auto">
+            <article className="flex min-h-40 basis-[97%] shrink-0 snap-center flex-col overflow-hidden rounded-lg border border-[#d2d2d7] bg-white/70 hover:bg-white/90 p-3 shadow-md sm:rounded-xl sm:p-5 overflow-y-auto">
               <div className="flex shrink-0 items-start justify-between gap-3">
                 <div className="min-w-0">
-                  <p className="text-[8px] font-semibold uppercase tracking-[0.2em] text-slate-400 sm:text-[9px]">
+                  <p className="text-[8px] font-semibold uppercase tracking-[0.2em] text-[#6e6e73] sm:text-[9px]">
                     İçerik
                   </p>
 
@@ -929,19 +929,19 @@ const DataSection = () => {
                   </h4>
                 </div>
 
-                <span className="shrink-0 text-[7px] uppercase tracking-wider text-slate-400 sm:text-[9px]">
+                <span className="shrink-0 text-[7px] uppercase tracking-wider text-[#6e6e73] sm:text-[9px]">
                   Performans
                 </span>
               </div>
 
               <div className="mt-3 grid min-h-0 flex-1 grid-cols-1 gap-2 sm:mt-4 sm:grid-cols-2 sm:gap-3">
-                <div className="rounded-lg border border-white/10 bg-white/[0.055] p-3 sm:rounded-xl sm:p-4">
+                <div className="rounded-lg border border-[#d2d2d7] bg-white/70 hover:bg-white/90 p-3 sm:rounded-xl sm:p-4">
                   <div className="flex items-center justify-between">
-                    <p className="text-[8px] font-semibold uppercase tracking-wider text-slate-400 sm:text-[9px]">
+                    <p className="text-[8px] font-semibold uppercase tracking-wider text-[#6e6e73] sm:text-[9px]">
                       En çok izlenenler
                     </p>
 
-                    <span className="text-[8px] text-slate-400">
+                    <span className="text-[8px] text-[#6e6e73]">
                       Görüntüleme
                     </span>
                   </div>
@@ -952,7 +952,7 @@ const DataSection = () => {
                         .slice(0, 5)
                         .map(({ name, views }, index) => (
                           <div key={name} className="flex items-center gap-2">
-                            <span className="w-3 text-[8px] font-bold text-slate-400 sm:w-4 sm:text-[9px]">
+                            <span className="w-3 text-[8px] font-bold text-[#6e6e73] sm:w-4 sm:text-[9px]">
                               {String(index + 1).padStart(2, "0")}
                             </span>
 
@@ -961,9 +961,9 @@ const DataSection = () => {
                             </span>
 
                             <div className="min-w-0 flex-1">
-                              <div className="h-2 overflow-hidden rounded-full bg-[#292e36]">
+                              <div className="h-2 overflow-hidden rounded-full bg-white/80">
                                 <div
-                                  className="h-full rounded-full bg-[#10141b] transition-all duration-500"
+                                  className="h-full rounded-full bg-white/70 hover:bg-white/90 transition-all duration-500"
                                   style={{
                                     width: `${Math.min(
                                       100,
@@ -980,7 +980,7 @@ const DataSection = () => {
                           </div>
                         ))
                     ) : (
-                      <p className="text-[9px] text-slate-400">
+                      <p className="text-[9px] text-[#6e6e73]">
                         İçerik verisi yok
                       </p>
                     )}
@@ -988,8 +988,8 @@ const DataSection = () => {
                 </div>
 
                 <div className="grid grid-cols-2 gap-2 sm:gap-3">
-                  <div className="rounded-lg border border-white/10 bg-white/[0.055] p-3 sm:rounded-xl sm:p-4">
-                    <p className="text-[8px] uppercase tracking-wider text-slate-400">
+                  <div className="rounded-lg border border-[#d2d2d7] bg-white/70 hover:bg-white/90 p-3 sm:rounded-xl sm:p-4">
+                    <p className="text-[8px] uppercase tracking-wider text-[#6e6e73]">
                       Sayfa / oturum
                     </p>
 
@@ -1001,7 +1001,7 @@ const DataSection = () => {
                       {content.pagesTrend.map((value, index) => (
                         <div
                           key={index}
-                          className="flex-1 rounded-t bg-[#344950] transition-all duration-500"
+                          className="flex-1 rounded-t bg-white/80 transition-all duration-500"
                           style={{
                             height: `${Math.max(2, (value / pagesMax) * 100)}%`,
                           }}
@@ -1010,8 +1010,8 @@ const DataSection = () => {
                     </div>
                   </div>
 
-                  <div className="rounded-lg border border-white/10 bg-white/[0.055] p-3 sm:rounded-xl sm:p-4">
-                    <p className="text-[8px] uppercase tracking-wider text-slate-400">
+                  <div className="rounded-lg border border-[#d2d2d7] bg-white/70 hover:bg-white/90 p-3 sm:rounded-xl sm:p-4">
+                    <p className="text-[8px] uppercase tracking-wider text-[#6e6e73]">
                       Hemen çıkma oranı
                     </p>
 
@@ -1023,7 +1023,7 @@ const DataSection = () => {
                       {content.bounceTrend.map((value, index) => (
                         <div
                           key={index}
-                          className="flex-1 rounded-t bg-[#263c43] transition-all duration-500"
+                          className="flex-1 rounded-t bg-white/80 transition-all duration-500"
                           style={{
                             height: `${Math.max(
                               2,
@@ -1035,10 +1035,10 @@ const DataSection = () => {
                     </div>
                   </div>
 
-                  <div className="col-span-2 rounded-lg bg-[#10141b] p-3 text-white sm:rounded-xl sm:p-4">
+                  <div className="col-span-2 rounded-lg bg-white/70 hover:bg-white/90 p-3 text-white sm:rounded-xl sm:p-4">
                     <div className="flex items-center justify-between gap-3">
                       <div className="min-w-0">
-                        <p className="text-[7px] uppercase tracking-[0.18em] text-slate-400 sm:text-[9px]">
+                        <p className="text-[7px] uppercase tracking-[0.18em] text-[#6e6e73] sm:text-[9px]">
                           En iyi proje
                         </p>
 
@@ -1052,7 +1052,7 @@ const DataSection = () => {
                           {content.topProject.percentage}%
                         </p>
 
-                        <p className="text-[7px] uppercase tracking-wider text-slate-400">
+                        <p className="text-[7px] uppercase tracking-wider text-[#6e6e73]">
                           proje görüntülemeleri
                         </p>
                       </div>
@@ -1070,7 +1070,7 @@ const DataSection = () => {
             aria-label="Previous data point"
             disabled={activeDataPoint === 0}
             onClick={goToPreviousDataPoint}
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/[0.055] text-slate-300 transition hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#7fc2d4]/40 disabled:cursor-not-allowed disabled:opacity-40"
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-[#d2d2d7] bg-white/80 text-[#1d1d1f] transition hover:bg-white/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0071e3]/40 disabled:cursor-not-allowed disabled:opacity-40"
           >
             <ChevronLeft size={18} aria-hidden="true" />
           </button>
@@ -1087,10 +1087,10 @@ const DataSection = () => {
                 aria-label={`Go to data point ${index + 1}`}
                 aria-current={activeDataPoint === index ? "true" : undefined}
                 onClick={() => goToDataPoint(index)}
-                className={`h-2.5 rounded-full transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#7fc2d4]/40 ${
+                className={`h-2.5 rounded-full transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0071e3]/40 ${
                   activeDataPoint === index
-                    ? "w-6 bg-[#263c43]"
-                    : "w-2.5 bg-slate-400/30 hover:bg-[#263c43]"
+                    ? "w-6 bg-white/80"
+                    : "w-2.5 bg-slate-400/30 hover:bg-white/90"
                 }`}
               />
             ))}
@@ -1101,7 +1101,7 @@ const DataSection = () => {
             aria-label="Next data point"
             disabled={activeDataPoint === dataPointCount - 1}
             onClick={goToNextDataPoint}
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/[0.055] text-slate-300 transition hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#7fc2d4]/40 disabled:cursor-not-allowed disabled:opacity-40"
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-[#d2d2d7] bg-white/80 text-[#1d1d1f] transition hover:bg-white/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0071e3]/40 disabled:cursor-not-allowed disabled:opacity-40"
           >
             <ChevronRight size={18} aria-hidden="true" />
           </button>

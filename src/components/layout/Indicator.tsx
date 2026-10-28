@@ -21,9 +21,9 @@ const Indicator = ({
         aria-label="Previous section"
         disabled={sectionIndex === 0}
         onClick={() => onSectionSelect(sectionIndex - 1)}
-        className="flex h-7 w-7 items-center justify-center text-slate-400 transition hover:text-[#d9b486] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#7fc2d4]/40 disabled:cursor-not-allowed disabled:opacity-25"
+        className="flex h-7 w-7 items-center justify-center text-[#6e6e73] transition hover:text-amber-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0071e3]/40 disabled:cursor-not-allowed disabled:opacity-25"
       >
-        <ChevronUp size={16} strokeWidth={1.5} />
+        <ChevronUp size={16} strokeWidth={2} />
       </button>
 
       <div className="flex flex-col items-center gap-2.5" role="group" aria-label="Sections">
@@ -38,15 +38,15 @@ const Indicator = ({
               aria-current={isActive ? "page" : undefined}
               title={tab.title}
               onClick={() => onSectionSelect(index)}
-              className={`group flex h-5 w-5 items-center justify-center rounded-full transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#7fc2d4]/40 ${
+              className={`group flex h-5 w-5 items-center justify-center rounded-full transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0071e3]/40 ${
                 isActive
-                    ? "bg-[#7fc2d4] shadow-[0_0_12px_rgba(127,194,212,0.28)]"
-                    : "bg-slate-600/70 hover:scale-125 hover:bg-slate-400"
+                    ? "bg-[#0071e3] shadow-sm shadow-[#0071e3]/20"
+                    : "bg-slate-500/70 hover:scale-125 hover:bg-slate-600"
               }`}
             >
               <span
                 className={`rounded-full transition-all duration-300 ${
-                  isActive ? "h-3.5 w-1.5 bg-white/90" : "h-1.5 w-1.5 bg-white/80"
+                  isActive ? "h-3.5 w-1.5 bg-white" : "h-1.5 w-1.5 bg-white/80"
                 }`}
               >
                 <span className="sr-only">{tab.title}</span>
@@ -61,7 +61,7 @@ const Indicator = ({
         aria-label="Next section"
         disabled={sectionIndex === tabs.length - 1}
         onClick={() => onSectionSelect(sectionIndex + 1)}
-        className="flex h-7 w-7 items-center justify-center text-slate-400 transition hover:text-[#d9b486] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#7fc2d4]/40 disabled:cursor-not-allowed disabled:opacity-25"
+        className="flex h-7 w-7 items-center justify-center text-[#6e6e73] transition hover:text-amber-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0071e3]/40 disabled:cursor-not-allowed disabled:opacity-25"
       >
         <ChevronDown size={16} strokeWidth={1.5} />
       </button>

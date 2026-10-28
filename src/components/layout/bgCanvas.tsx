@@ -10,10 +10,10 @@ interface CircularCanvasGridProps {
 }
 
 export default function CircularCanvasGrid({
-  cellSize = 28,
-  lineColor = "#67cbd350",
-  lineWidth = 1,
-  fadeStart = 0.65,
+  cellSize = 32,
+  lineColor = "rgba(125, 119, 137, 0.16)",
+  lineWidth = 0.75,
+  fadeStart = 0.2,
   fadeEnd = 1,
 }: CircularCanvasGridProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -102,6 +102,7 @@ export default function CircularCanvasGrid({
         display: "block",
         width: "100%",
         height: "100%",
+        opacity: 0.6,
       }}
     />
   );
