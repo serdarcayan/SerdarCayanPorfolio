@@ -14,7 +14,7 @@ const ExperiencesSection = () => {
       <div className="relative mx-auto w-full max-w-3xl">
         <div
           aria-hidden="true"
-          className="absolute bottom-3 left-[11px] top-3 z-0 w-px bg-[#7fc2d4]/15"
+          className="absolute bottom-3 left-[11px] top-3 z-0 w-px bg-[#0071e3]/15"
         />
         <ol className="relative">
           {journey.map(({ title, role, description, date }, index) => {
@@ -27,15 +27,15 @@ const ExperiencesSection = () => {
                 key={title}
                 className={`relative grid grid-cols-[1.5rem_minmax(0,1fr)] gap-x-2.5 py-2.5 sm:py-3 ${
                   index < journey.length - 1
-                    ? "border-b border-white/[0.07]"
+                    ? "border-b border-[#d2d2d7]"
                     : ""
                 }`}
               >
                 <div
-                  className={`relative z-10 mt-0.5 flex size-[23px] items-center justify-center justify-self-center rounded-full border bg-[#1b2028] ${
+                  className={`relative z-10 mt-0.5 flex size-[23px] items-center justify-center justify-self-center rounded-full border bg-white/80 ${
                     isCurrent
-                      ? "border-white/40 text-[#91b9bd]"
-                      : "border-white/10 text-[#91b9bd]/70"
+                      ? "border-[#d2d2d7] text-[#0071e3]"
+                      : "border-[#d2d2d7] text-[#0071e3]"
                   }`}
                   aria-hidden="true"
                 >
@@ -44,25 +44,25 @@ const ExperiencesSection = () => {
 
                 <div className="min-w-0">
                   <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-0.5">
-                    <h3 className="text-[13px] font-semibold leading-snug text-slate-100 sm:text-sm">
+                    <h3 className="text-[13px] font-semibold leading-snug text-[#1d1d1f] sm:text-sm">
                       {title}
                     </h3>
-                    <span className="shrink-0 font-mono text-[10px] text-slate-400">
+                    <span className="shrink-0 font-mono text-[10px] text-[#6e6e73]">
                       {date}
                     </span>
                   </div>
                   <div className="mt-0.5 flex flex-wrap items-center gap-x-2">
-                    <p className="text-[11px] font-medium text-[#91b9bd]">
+                    <p className="text-[11px] font-medium text-[#0071e3]">
                       {role}
                     </p>
                     {isCurrent && (
-                      <span className="inline-flex items-center gap-1 text-[9px] font-medium text-emerald-300">
+                      <span className="inline-flex items-center gap-1 text-[9px] font-medium text-emerald-700">
                         <span className="size-1 rounded-full bg-emerald-500" />
                         Devam ediyor
                       </span>
                     )}
                   </div>
-                  <p className="mt-1 text-[11px] leading-relaxed text-slate-400 sm:text-xs">
+                  <p className="mt-1 text-[11px] leading-relaxed text-[#6e6e73] sm:text-xs">
                     {description}
                   </p>
                 </div>

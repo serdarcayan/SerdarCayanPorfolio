@@ -87,18 +87,18 @@ const PortfolioScene = () => {
     <main className="relative w-dvw h-dvh overflow-hidden">
       <div className="absolute inset-0 overflow-hidden background-gradient pointer-events-none">
         {/* Top-right chrome rings */}
-        <div className="absolute -right-20 -top-24 size-72 rounded-full border border-white/20 shadow-[0_0_0_1px_rgba(148,163,184,0.06),inset_0_0_24px_rgba(255,255,255,0.08)]" />
+        <div className="absolute -right-20 -top-24 size-72 rounded-full border border-[#d2d2d7] shadow-[0_0_0_1px_rgba(148,163,184,0.06),inset_0_0_24px_rgba(255,255,255,0.08)]" />
 
-        <div className="absolute -right-12 -top-16 size-56 rounded-full border-[3px] border-white/10 shadow-[0_0_18px_rgba(255,255,255,0.08)]" />
+        <div className="absolute -right-12 -top-16 size-56 rounded-full border-[3px] border-[#d2d2d7] shadow-[0_0_18px_rgba(255,255,255,0.08)]" />
 
         <div className="absolute -right-4 -top-8 size-40 rounded-full border border-slate-500/10" />
 
         <CircularCanvasGrid/>
 
         {/* Bottom-left soft rings */}
-        <div className="absolute -bottom-24 -left-20 size-64 rounded-full border border-white/20 shadow-[0_0_0_1px_rgba(148,163,184,0.06)]" />
+        <div className="absolute -bottom-24 -left-20 size-64 rounded-full border border-[#d2d2d7] shadow-[0_0_0_1px_rgba(148,163,184,0.06)]" />
 
-        <div className="absolute -bottom-16 -left-12 size-48 rounded-full border-[3px] border-white/10" />
+        <div className="absolute -bottom-16 -left-12 size-48 rounded-full border-[3px] border-[#d2d2d7]" />
 
         <div className="absolute -bottom-8 -left-4 size-32 rounded-full border border-slate-500/10" />
       </div>
@@ -132,7 +132,7 @@ const PortfolioScene = () => {
       <div className="absolute bottom-4 right-3 md:right-1/2 md:translate-x-1/2">
         {sectionIndex < sections.length - 1 ? (
           <button
-            className="cursor-pointer animate-pulse rounded-full bg-[#426f74] p-2 text-white shadow-lg shadow-black/30 transition hover:scale-110 hover:bg-[#54858a] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#7fc2d4]/40"
+            className="cursor-pointer animate-pulse rounded-full bg-[#0071e3] p-2 text-white shadow-md shadow-black/10 transition hover:scale-110 hover:bg-[#0066cc] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0071e3]/40"
             onClick={() => handleSectionSelect(sectionIndex + 1)}
             aria-label="Next section"
           >
@@ -140,7 +140,7 @@ const PortfolioScene = () => {
           </button>
         ) : (
           <button
-            className="cursor-pointer rounded-full bg-[#426f74] p-2 text-white shadow-lg shadow-black/30 transition hover:scale-110 hover:bg-[#54858a] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#7fc2d4]/40"
+            className="cursor-pointer rounded-full bg-[#0071e3] p-2 text-white shadow-md shadow-black/10 transition hover:scale-110 hover:bg-[#0066cc] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0071e3]/40"
             onClick={() => handleSectionSelect(0)}
             aria-label="Back to top"
           >

@@ -25,12 +25,12 @@ const SkillsSection = () => {
     >
       <div className="flex w-full flex-col gap-7 sm:gap-9">
         <section className="w-full">
-          <p className="mb-4 max-w-xl border-l-2 border-[#7fc2d4]/50 pl-3 text-xs leading-relaxed text-slate-300 sm:mb-5 sm:text-sm">
+          <p className="mb-4 max-w-xl border-l-2 border-[#0071e3]/50 pl-3 text-xs leading-relaxed text-[#6e6e73] sm:mb-5 sm:text-sm">
             Elektronik, gömülü sistemler ve yazılım geliştirme alanındaki temel
             yetkinliklerim.
           </p>
 
-          <div className="mx-auto flex w-full flex-col divide-y divide-white/10 border-y border-white/10">
+          <div className="mx-auto flex w-full flex-col divide-y divide-[#d2d2d7] border-y border-[#d2d2d7]">
             {skillCategories.map((category, index) => (
               <SkillsCard
                 key={category.title}
@@ -43,15 +43,15 @@ const SkillsSection = () => {
           </div>
         </section>
 
-        <section className="border-t border-white/15 pt-6 sm:pt-8">
+        <section className="border-t border-[#d2d2d7] pt-6 sm:pt-8">
           <header className="mb-4 sm:mb-5">
-            <p className="mb-1.5 text-[9px] font-semibold tracking-[0.2em] text-[#91b9bd] sm:text-[10px]">
+            <p className="mb-1.5 text-[9px] font-semibold tracking-[0.2em] text-[#0071e3] sm:text-[10px]">
               TEKNOLOJİLER / 02
             </p>
-            <h3 className="text-xl font-semibold tracking-tight text-slate-100 sm:text-2xl">
-              Teknoloji yığını<span className="text-slate-400">.</span>
+            <h3 className="text-xl font-semibold tracking-tight text-[#1d1d1f] sm:text-2xl">
+              Teknoloji yığını<span className="text-[#6e6e73]">.</span>
             </h3>
-            <p className="mt-1 text-xs text-slate-400 sm:text-sm">
+            <p className="mt-1 text-xs text-[#6e6e73] sm:text-sm">
               Çalıştığım teknolojiler ve araçlar.
             </p>
           </header>
@@ -60,13 +60,13 @@ const SkillsSection = () => {
             {techStacks.map((stack, index) => (
               <article
                 key={stack.title}
-                className="min-w-0 rounded-xl border border-white/10 bg-white/[0.055] p-3 transition-colors hover:border-white/20 sm:rounded-2xl sm:p-4"
+                className="min-w-0 rounded-xl border border-[#d2d2d7] bg-white/70 hover:bg-white/90 p-3 transition-colors hover:border-[#d2d2d7] sm:rounded-2xl sm:p-4"
               >
                 <header className="mb-3 flex items-center justify-between gap-2">
-                  <h4 className="text-[9px] font-bold tracking-[0.12em] text-[#91b9bd] sm:text-[10px]">
+                  <h4 className="text-[9px] font-bold tracking-[0.12em] text-[#0071e3] sm:text-[10px]">
                     {stack.title}
                   </h4>
-                  <span className="shrink-0 font-mono text-[9px] text-slate-400">
+                  <span className="shrink-0 font-mono text-[9px] text-[#6e6e73]">
                     {formatItemIndex(index)}
                   </span>
                 </header>
@@ -75,7 +75,7 @@ const SkillsSection = () => {
                   {stack.technologies.map((technology) => (
                     <span
                       key={technology}
-                      className="rounded-md bg-[#7fc2d4]/10 px-2 py-1 text-[10px] font-medium leading-snug text-[#91b9bd] sm:text-[11px]"
+                      className="rounded-md bg-[#0071e3]/10 px-2 py-1 text-[10px] font-medium leading-snug text-[#0071e3] sm:text-[11px]"
                     >
                       {technology}
                     </span>
@@ -86,15 +86,15 @@ const SkillsSection = () => {
           </div>
         </section>
 
-        <section className="border-t border-white/15 pt-6 sm:pt-8">
+        <section className="border-t border-[#d2d2d7] pt-6 sm:pt-8">
           <header className="mb-4 sm:mb-5">
-            <p className="mb-1.5 text-[9px] font-semibold tracking-[0.2em] text-[#91b9bd] sm:text-[10px]">
+            <p className="mb-1.5 text-[9px] font-semibold tracking-[0.2em] text-[#0071e3] sm:text-[10px]">
               ÇALIŞMA YÖNTEMİ
             </p>
-            <h3 className="text-xl font-semibold tracking-tight text-slate-100 sm:text-2xl">
-              Nasıl çalışırım<span className="text-slate-400">.</span>
+            <h3 className="text-xl font-semibold tracking-tight text-[#1d1d1f] sm:text-2xl">
+              Nasıl çalışırım<span className="text-[#6e6e73]">.</span>
             </h3>
-            <p className="mt-1 max-w-lg text-xs leading-relaxed text-slate-400 sm:text-sm">
+            <p className="mt-1 max-w-lg text-xs leading-relaxed text-[#6e6e73] sm:text-sm">
               Problemi anlamaktan test ve sürekli iyileştirmeye kadar olan
               süreç.
             </p>
@@ -104,16 +104,16 @@ const SkillsSection = () => {
             {buildSteps.map((step) => (
               <article
                 key={step.number}
-                className="relative flex min-h-32 flex-col justify-between overflow-hidden rounded-xl border border-white/10 bg-white/[0.055] p-3 transition-colors hover:border-white/20 sm:min-h-36 sm:rounded-2xl sm:p-4"
+                className="relative flex min-h-32 flex-col justify-between overflow-hidden rounded-xl border border-[#d2d2d7] bg-white/70 hover:bg-white/90 p-3 transition-colors hover:border-[#d2d2d7] sm:min-h-36 sm:rounded-2xl sm:p-4"
               >
-                <span className="mb-3 font-mono text-[10px] tracking-[0.14em] text-[#91b9bd]/60">
+                <span className="mb-3 font-mono text-[10px] tracking-[0.14em] text-[#0071e3]">
                   {step.number}
                 </span>
-                <h4 className="mb-1.5 text-xs font-semibold leading-snug tracking-tight text-slate-100 sm:text-sm">
+                <h4 className="mb-1.5 text-xs font-semibold leading-snug tracking-tight text-[#1d1d1f] sm:text-sm">
                   {step.title}
                 </h4>
 
-                <p className="text-[11px] leading-relaxed text-slate-400 sm:text-xs">
+                <p className="text-[11px] leading-relaxed text-[#6e6e73] sm:text-xs">
                   {step.description}
                 </p>
               </article>
@@ -121,12 +121,12 @@ const SkillsSection = () => {
           </div>
         </section>
 
-        <footer className="flex flex-col gap-2 border-t border-white/15 pt-4 pb-2 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-[11px] text-slate-400 sm:text-xs">
+        <footer className="flex flex-col gap-2 border-t border-[#d2d2d7] pt-4 pb-2 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-[11px] text-[#6e6e73] sm:text-xs">
             Donanım, yazılımla buluşur; Teknoloji eksosisteminin çalışması
             amaçlanır.
           </p>
-          <span className="font-mono text-[9px] tracking-[0.14em] text-slate-400">
+          <span className="font-mono text-[9px] tracking-[0.14em] text-[#6e6e73]">
             YETENEKLER / TEKNOLOJİLER / İŞ AKIŞI
           </span>
         </footer>
@@ -155,7 +155,7 @@ const SkillsCard = ({ category, index, isOpen, onToggle }: SkillsCardType) => {
   return (
     <article
       className={`overflow-hidden transition-colors p-2 ${
-        isOpen ? "bg-white/[0.055] shadow-inner rounded" : "bg-transparent"
+        isOpen ? "bg-white/70 hover:bg-white/90 shadow-inner rounded" : "bg-transparent"
       }`}
     >
       <button
@@ -166,17 +166,17 @@ const SkillsCard = ({ category, index, isOpen, onToggle }: SkillsCardType) => {
         aria-controls={panelId}
       >
         <div className="flex min-w-0 items-center gap-3">
-          <span className="font-mono text-[9px] font-medium tracking-[0.12em] text-[#91b9bd]/65">
+          <span className="font-mono text-[9px] font-medium tracking-[0.12em] text-[#0071e3]">
             {formatItemIndex(index)}
           </span>
 
-          <h3 className="text-left text-[13px] font-medium leading-snug tracking-tight text-slate-100 sm:text-sm">
+          <h3 className="text-left text-[13px] font-medium leading-snug tracking-tight text-[#1d1d1f] sm:text-sm">
             {category.title}
           </h3>
         </div>
 
         <span
-          className={`inline-flex size-6 shrink-0 items-center justify-center text-[#91b9bd]/70 transition-transform duration-300 ${
+          className={`inline-flex size-6 shrink-0 items-center justify-center text-[#0071e3] transition-transform duration-300 ${
             isOpen ? "rotate-45" : "rotate-0"
           }`}
           aria-hidden="true"
@@ -192,13 +192,13 @@ const SkillsCard = ({ category, index, isOpen, onToggle }: SkillsCardType) => {
         }`}
       >
         <div className="min-h-0 overflow-hidden">
-          <ul className="flex flex-col gap-2 border-t border-white/10 pb-3 pl-7 pr-2 pt-3">
+          <ul className="flex flex-col gap-2 border-t border-[#d2d2d7] pb-3 pl-7 pr-2 pt-3">
             {category.skills.map((skill) => (
               <li
                 key={skill}
-                className="flex items-start gap-2 text-xs leading-relaxed text-slate-300 sm:text-[13px]"
+                className="flex items-start gap-2 text-xs leading-relaxed text-[#6e6e73] sm:text-[13px]"
               >
-                <span className="mt-1.5 size-1 shrink-0 rounded-full bg-[#7fc2d4]/60" />
+                <span className="mt-1.5 size-1 shrink-0 rounded-full bg-[#0071e3]/60" />
                 <span>{skill}</span>
               </li>
             ))}

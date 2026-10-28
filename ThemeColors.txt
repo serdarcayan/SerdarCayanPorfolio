@@ -1,52 +1,38 @@
 Portfolio Color Theme
 =====================
 
-Theme: Charcoal graphite with muted teal, blue and restrained amber accents.
+Theme: Apple-inspired light interface with restrained system-blue accents.
 
-Core colors
------------
-Color           Hex         Tailwind class                 Usage
-Near black      #050505   bg-[#050505]                   Main page background
-Graphite        #14181F   bg-[#14181f]                   Glass panels and cards
-Primary text    #E8EDF2   text-slate-100                Headings and primary copy
-Muted text      #A1AAB5   text-slate-400                Supporting text
-Muted teal      #7FC2D4   text-[#7fc2d4]                Logo and primary accent
-Blue            #A7BADE   text-blue-300                 Secondary technology accent
-Amber           #D9B486   text-[#d9b486]                Restrained highlight and hover accent
+Typography and accents
+----------------------
+Usage               Color / Tailwind class
+Primary text        #1D1D1F / text-[#1d1d1f]
+Secondary text      #424245 / text-[#424245]
+Description         #515154 / text-[#515154]
+Muted text          #6E6E73 / text-[#6e6e73]
+Apple blue          #0071E3 / text-[#0071e3]
+Blue hover          #0066CC / text-[#0066cc]
+Warm accent         text-amber-700
+Positive status     text-emerald-700
 
-Panel and surface colors
-------------------------
-Panel gradient (CSS):
-  from-[rgba(20,24,31,0.90)]
-  via-[rgba(11,14,20,0.88)]
-  to-[rgba(19,19,27,0.90)]
-
-Soft teal surface rgba(127,194,212,0.10)
-Card surface      rgba(255,255,255,0.055)
-Subtle border     rgba(226,232,240,0.12)
-
-Background glow
----------------
-Color       CSS value                    Tailwind arbitrary value
-Teal glow   rgba(32, 73, 76, 0.30)
-Navy glow   rgba(19, 36, 61, 0.28)
-Violet glow rgba(34, 26, 67, 0.20)
-Amber glow  rgba(70, 51, 25, 0.18)
-
-Tailwind utility patterns
--------------------------
-Primary heading:  text-slate-100
-Accent label:     text-[#91b9bd]
-Accent button:    bg-[#426f74] text-white hover:bg-[#54858a]
-Warm hover:       hover:text-[#d9b486]
-Soft card:        border border-white/10 bg-white/[0.055]
-Panel glass:      border border-white/10 bg-[#14181f]/90 backdrop-blur-xl
-Muted copy:       text-slate-400
+Surfaces and controls
+---------------------
+Page background     #F5F5F7
+Glass panel         bg-white/70 backdrop-blur-xl
+Glass card          bg-white/70
+Card hover          hover:bg-white/90
+Border              #D2D2D7 / border-[#d2d2d7]
+Subtle shadow       shadow-sm shadow-black/5
+Primary button      bg-[#0071e3] text-white
+Primary hover       hover:bg-[#0066cc]
+Secondary button    bg-white/80 text-[#1d1d1f]
+Scrollbar           Apple-blue tint
+Typography          -apple-system, BlinkMacSystemFont, Segoe UI
 
 Usage guidance
 --------------
-- Use near-white for primary headings and readable body copy.
-- Use muted teal for interactive elements, section labels and active navigation.
-- Reserve amber for small highlights and hover states.
-- Keep large surfaces dark and translucent; use the gradient glows sparingly.
-- Use slate for secondary copy and supporting labels.
+- Keep surfaces bright, neutral and uncluttered.
+- Use Apple blue for links, actions, selected states and icons.
+- Use near-black for primary text and soft gray for supporting copy.
+- Reserve warm and green colors for small semantic accents.
+- Prefer subtle borders, shadows and background gradients.

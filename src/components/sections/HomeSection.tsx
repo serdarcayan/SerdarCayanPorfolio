@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import packageJson from "../../../package.json";
 import SectionTemplate from "../layout/SectionTemplate";
-import SiteIcon from "../../assets/SiteIconLight.svg";
+import SiteIcon from "../../assets/SiteIcon.svg";
 
 const professions = [
   "Elektronik Teknikeri",
@@ -27,10 +27,7 @@ const HomeSection = ({ onSectionSelect }: HomeSectionProps) => {
   }, []);
 
   return (
-    <SectionTemplate
-      hasHeader={false}
-      hasJourney={false}
-    >
+    <SectionTemplate hasHeader={false} hasJourney={false}>
       <header className="flex w-full items-center justify-between">
         {SiteIcon ? (
           <img
@@ -39,26 +36,31 @@ const HomeSection = ({ onSectionSelect }: HomeSectionProps) => {
             className="block h-auto w-8 max-w-full object-contain sm:w-10 md:w-11"
           />
         ) : (
-          <span className="text-[10px] font-bold tracking-[0.25em] text-[#91b9bd] sm:text-xs">
+          <span className="text-[10px] font-bold tracking-[0.25em] text-[#0071e3] sm:text-xs">
             SC
           </span>
         )}
+
         <div className="flex items-center gap-2">
           <a
             href="https://github.com/serdarcayan/SerdarCayanPorfolio"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="GitHub profilini aç"
+            className="transition-opacity hover:opacity-70"
           >
             <img
               src={`${import.meta.env.BASE_URL}svg/github.svg`}
               alt="GitHub"
-              className="h-6 w-6 brightness-0 invert opacity-75 transition-opacity hover:opacity-100"
+              className="h-6 w-6 brightness-0 opacity-75 transition-opacity hover:opacity-100"
             />
           </a>
-          <span className="text-[10px] font-medium tracking-[0.2em] text-slate-400 sm:text-xs">
+
+          <span className="text-[10px] font-medium tracking-[0.2em] text-[#6e6e73] sm:text-xs">
             |
           </span>
-          <span className="text-[10px] font-medium tracking-[0.2em] text-slate-400 sm:text-xs">
+
+          <span className="text-[10px] font-medium tracking-[0.2em] text-[#6e6e73] sm:text-xs">
             V{packageJson.version}
           </span>
         </div>
@@ -66,27 +68,27 @@ const HomeSection = ({ onSectionSelect }: HomeSectionProps) => {
 
       <div className="my-auto flex w-full max-w-5xl flex-col justify-center py-16 sm:py-20">
         <div className="mb-10 sm:mb-14">
-          <p className="mb-5 text-[10px] font-semibold uppercase tracking-[0.25em] text-[#91b9bd] sm:text-xs">
+          <p className="mb-5 text-[10px] font-semibold uppercase tracking-[0.25em] text-[#0071e3] sm:text-xs">
             Planlar · Tasarlar · Somutlaştırır
           </p>
 
-          <h1 className="text-[clamp(3rem,14vw,7rem)] font-semibold leading-[0.9] tracking-[-0.06em] text-slate-100">
+          <h1 className="text-[clamp(3rem,14vw,7rem)] font-semibold leading-[0.9] tracking-[-0.06em] text-[#1d1d1f]">
             SERDAR
             <br />
-            <span className="text-[#91b9bd]">ÇAYAN</span>
+            <span className="text-[#0071e3]">
+              ÇAYAN
+            </span>
           </h1>
         </div>
 
-        <div className="mb-10 border-y border-white/15 py-5 sm:mb-12 sm:py-6">
+        <div className="mb-10 border-y border-slate-500/40 py-5 sm:mb-12 sm:py-6">
           <div
-            className="h-5 overflow-hidden text-xs font-semibold uppercase tracking-[0.18em] text-slate-400 sm:h-6 sm:text-sm"
+            className="h-5 overflow-hidden text-xs font-semibold uppercase tracking-[0.18em] text-[#0071e3] sm:h-6 sm:text-sm"
             style={{ perspective: "500px" }}
           >
             <ul
               className="relative h-full"
-              style={{
-                transformStyle: "preserve-3d",
-              }}
+              style={{ transformStyle: "preserve-3d" }}
             >
               {professions.map((profession, index) => {
                 const offset =
@@ -121,27 +123,29 @@ const HomeSection = ({ onSectionSelect }: HomeSectionProps) => {
         </div>
 
         <div className="flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
-          {/* <p className="max-w-md text-sm leading-7 text-slate-400 sm:text-base">
-            Donanım ve yazılımı bir bütün olarak ele alıyor; elektronik
-            sistemlerden gömülü sistem çözümlerinden, yapay zekâdan web
-            uygulamalarına kadar fikirleri çalışan sistemlere dönüştürüyorum.
-          </p> */}
+          {/*
+        <p className="max-w-md text-sm leading-7 text-[#424245] sm:text-base">
+          Donanım ve yazılımı bir bütün olarak ele alıyor; elektronik
+          sistemlerden gömülü sistem çözümlerine, yapay zekâdan web
+          uygulamalarına kadar fikirleri çalışan sistemlere dönüştürüyorum.
+        </p>
+        */}
 
           <button
             onClick={() => onSectionSelect(3)}
-            className="group flex w-fit items-center gap-4 border-b-2 border-[#7fc2d4] pb-2 text-sm font-semibold text-[#91b9bd] transition-all duration-300 hover:gap-6 hover:text-[#91b9bd]"
+            className="group flex w-fit items-center gap-4 border-b-2 border-[#0071e3] pb-2 text-sm font-semibold text-[#0071e3] transition-all duration-300 hover:gap-6 hover:border-[#0066cc] hover:text-[#0066cc]"
           >
             <span>Projeleri keşfet</span>
 
-            <span className="text-[#d9b486] transition-transform duration-300 group-hover:translate-x-1">
+            <span className="text-[#0071e3] transition-transform duration-300 group-hover:translate-x-1 group-hover:text-[#0066cc]">
               →
             </span>
           </button>
         </div>
       </div>
 
-      <div className="w-full border-t border-white/15 pt-3">
-        <p className="text-[9px] uppercase tracking-[0.2em] text-slate-400 sm:text-[10px]">
+      <div className="w-full border-t border-[#d2d2d7] pt-3">
+        <p className="text-[9px] uppercase tracking-[0.2em] text-[#6e6e73] sm:text-[10px]">
           Elektronik · Yazılım · Gömülü sistemler · AI
         </p>
       </div>
