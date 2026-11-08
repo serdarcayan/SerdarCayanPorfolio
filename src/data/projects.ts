@@ -91,35 +91,25 @@ export const projects: Project[] = [
       "Ön yüz: TypeScript ile React SPA. Arka yüz: Express kullanan Node.js REST API. Veritabanı: Sequelize ORM ile PostgreSQL. Kimlik doğrulama: JWT.",
     result:
       "Platform başarıyla yayınlandı ve küçük ama aktif bir kullanıcı kitlesi oluşturdu. Mühendislerin iş birliği yapıp bilgi paylaşabileceği bir alan yarattı.",
-    github: "https://github.com/serdarcayan/turkishengineering",
+    github: "https://serdarcayan.github.io/Turkish-Engineering-Landing-Page/",
     featured: true,
   },
   {
-    id: "ne-almaliyim",
+    id: "new-projects",
     number: "03",
-    title: "Ne Almalıyım",
-    category: "MOBİL GELİŞTİRME",
-    description: "Mobil alışveriş / liste yönetimi uygulaması.",
+    title: "Yeni Projeler Çok Yakında",
+    category: "YAKINDA",
+    description:
+      "Yeni projeler üzerinde çalışıyorum. Detaylarını çok yakında burada paylaşacağım.",
     image: "",
-    technologies: ["Flutter", "Dart", "Riverpod"],
-    features: [
-      "Alışveriş listesi oluşturma ve yönetme",
-      "Listeleri başkalarıyla paylaşma",
-      "Çevrimdışı destek",
-      "Çapraz platform (iOS ve Android)",
-      "Basit ve sezgisel arayüz",
-    ],
+    technologies: [],
+    features: [],
     overview:
-      "Kullanıcıların alışveriş listelerini verimli şekilde yönetmelerine yardımcı olan, paylaşım imkanı sunan mobil uygulama.",
-    problem:
-      "Mevcut liste uygulamaları, özellikle paylaşılan aile alışverişlerinde sade ve çevrimdışı kullanım deneyimi sunmuyordu.",
-    solution:
-      "Çapraz platform uyumluluk için Flutter kullandım; durum yönetimi için Riverpod kullandım. Uygulama çevrimdışı çalışır, çevrimiçi olduğunda senkronize olur ve bağlantı yoluyla liste paylaşımı sağlar.",
-    architecture:
-      "Flutter ön yüz, Riverpod durum yönetimi. Çevrimdışı depolama ve senkronizasyon için Firebase kullanımı.",
-    result:
-      "Uygulama Google Play Store'da yayınlandı ve olumlu geri bildirimler aldı. Tam bir mobil ürün teslim edebilme yeteneğini gösterdi.",
-    github: "https://github.com/serdarcayan/ne-almaliyim",
+      "Yeni projeler üzerinde çalışıyorum. Duyuruları ve tüm detayları çok yakında bu sayfada paylaşacağım.",
+    problem: "",
+    solution: "",
+    architecture: "",
+    result: "",
     featured: true,
   },
 ];

@@ -22,7 +22,7 @@ const SectionTemplate = ({
   return (
     <section className="section-scroll-track relative flex h-dvh w-full items-center justify-center snap-start bg-transparent p-2 text-[#1d1d1f] sm:p-3">
       <div
-        className={`section-scroll-panel relative flex h-full w-full flex-col items-center overflow-hidden rounded-2xl border-t-2 border-l-2 border-[#d2d2d7] bg-transparent text-[#1d1d1f] shadow-lg shadow-black/5 backdrop-blur-xs sm:rounded-3xl ${className} transform-3d`}
+        className={`section-scroll-panel relative flex h-full w-full flex-col items-center overflow-hidden rounded-2xl border-t-2 border-l-2 border-[#d2d2d7] bg-white/15 text-[#1d1d1f] shadow-lg shadow-black/5 backdrop-blur-xs sm:rounded-3xl ${className} transform-3d`}
       >
         <div className="flex min-h-0 w-full max-w-7xl flex-1 flex-col overflow-x-hidden overflow-y-auto custom-scrollbar px-4 pb-4 pt-[max(1rem,env(safe-area-inset-top))] sm:px-6 sm:pb-6 lg:px-8 items-center">
           {hasHeader && (

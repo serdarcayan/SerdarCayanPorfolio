@@ -103,7 +103,7 @@ const ProjectCard = ({ project, onViewDetails }: ProjectCardProps) => {
         };
 
   return (
-    <article className="group flex h-full min-w-0 flex-col overflow-hidden rounded-2xl border border-[#d2d2d7] bg-white/70 hover:bg-white/90 shadow-sm shadow-black/5 transition-all duration-300 hover:-translate-y-1 hover:border-[#d2d2d7] hover:shadow-md sm:rounded-3xl sm:hover:-translate-y-1.5">
+    <article className="group flex h-full min-w-0 flex-col overflow-hidden rounded-2xl border border-[#d2d2d733] bg-transparent hover:bg-white/10  transition-all duration-300 hover:border-[#d2d2d7] hover:shadow-md shadow-white/30 sm:rounded-3xl">
       <div
         className={`relative m-2.5 mb-0 flex h-36 items-center justify-center overflow-hidden rounded-xl bg-linear-to-br sm:m-3 sm:mb-0 sm:h-44 sm:rounded-2xl ${visualStyle.background}`}
       >
@@ -111,7 +111,7 @@ const ProjectCard = ({ project, onViewDetails }: ProjectCardProps) => {
           <img
             src={project.image}
             alt={`${project.title} project preview`}
-            className="absolute inset-0 size-full object-cover transition-transform duration-500 group-hover:scale-105"
+            className="absolute inset-0 size-full object-cover transition-transform duration-500 "
           />
         ) : (
           <>
@@ -124,23 +124,23 @@ const ProjectCard = ({ project, onViewDetails }: ProjectCardProps) => {
             />
           </>
         )}
-        <div className="absolute inset-x-0 bottom-0 flex items-end justify-between bg-linear-to-t from-black/55 to-transparent px-4 pb-3 pt-10">
-          <span className="text-[10px] font-semibold tracking-[0.18em] text-white">
+        <div className="absolute inset-x-0 bottom-0 flex items-end justify-between bg-linear-to-t from-black/55 via-black/25 to-transparent px-4 pb-3 pt-10">
+          {/* <span className="text-[10px] font-semibold tracking-[0.18em] text-white">
             {visualStyle.label}
           </span>
           <span className="font-mono text-xs text-white/80">
             {project.number}
-          </span>
+          </span> */}
         </div>
-        {project.featured && (
+        {/* {project.featured && (
           <span className="absolute right-3 top-3 rounded-full border border-[#d2d2d7] bg-white/70 hover:bg-white/90 px-3 py-1 text-[10px] font-semibold tracking-wider text-[#6e6e73] shadow-sm backdrop-blur">
             ÖNE ÇIKAN
           </span>
-        )}
+        )} */}
       </div>
 
       <div className="flex flex-1 flex-col p-4 pt-3.5 sm:p-5 sm:pt-4">
-        <p className="text-[10px] font-semibold tracking-[0.18em] text-[#0071e3]">
+        <p className="text-[9px] font-semibold tracking-[0.18em] text-[#066079]">
           {project.category}
         </p>
         <h3 className="mt-2 text-xl font-semibold leading-snug tracking-tight text-[#1d1d1f]">
@@ -150,7 +150,7 @@ const ProjectCard = ({ project, onViewDetails }: ProjectCardProps) => {
           {project.description}
         </p>
 
-        <ul className="mt-5 flex flex-wrap gap-2" aria-label="Technologies">
+        {/* <ul className="mt-5 flex flex-wrap gap-2" aria-label="Technologies">
           {project.technologies.slice(0, 3).map((technology) => (
             <li
               key={technology}
@@ -164,13 +164,13 @@ const ProjectCard = ({ project, onViewDetails }: ProjectCardProps) => {
               +{project.technologies.length - 3}
             </li>
           )}
-        </ul>
+        </ul> */}
 
-        <footer className="mt-5 border-t border-[#d2d2d7] pt-4">
+        <footer className="mt-5 border-t border-[#066079] pt-4">
           <button
             type="button"
             onClick={onViewDetails}
-            className="inline-flex items-center gap-2 text-sm font-semibold text-[#1d1d1f] transition-colors hover:text-[#6e6e73] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-slate-300"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-[#066079] transition-colors hover:text-[#6e6e73] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-slate-300"
           >
             Detayları gör
             <ArrowUpRight
@@ -209,7 +209,7 @@ const ProjectDetailsModal = ({
       <section
         aria-labelledby="project-dialog-title"
         aria-modal="true"
-        className="relative max-h-[calc(100dvh-2rem-env(safe-area-inset-top)-env(safe-area-inset-bottom))] w-full max-w-3xl overflow-y-auto rounded-2xl border border-[#d2d2d7] bg-white/70 hover:bg-white/90 p-5 shadow-2xl sm:max-h-[min(85dvh,800px)] sm:rounded-3xl sm:p-9"
+        className="relative max-h-[calc(100dvh-2rem-env(safe-area-inset-top)-env(safe-area-inset-bottom))] w-full max-w-3xl overflow-y-auto rounded-2xl border border-[#d2d2d7] bg-gray-100 p-5 shadow-2xl sm:max-h-[min(85dvh,800px)] sm:rounded-3xl sm:p-9"
         role="dialog"
       >
         <button
@@ -235,44 +235,61 @@ const ProjectDetailsModal = ({
           {project.overview}
         </p>
 
-        <div className="mt-8 grid gap-6 sm:grid-cols-2">
-          <DetailSection title="Zorluk" content={project.problem} />
-          <DetailSection title="Çözüm" content={project.solution} />
-          <DetailSection title="Mimari" content={project.architecture} />
-          <DetailSection title="Sonuç" content={project.result} />
-        </div>
+        {(project.problem ||
+          project.solution ||
+          project.architecture ||
+          project.result) && (
+          <div className="mt-8 grid gap-6 sm:grid-cols-2">
+            {project.problem && (
+              <DetailSection title="Zorluk" content={project.problem} />
+            )}
+            {project.solution && (
+              <DetailSection title="Çözüm" content={project.solution} />
+            )}
+            {project.architecture && (
+              <DetailSection title="Mimari" content={project.architecture} />
+            )}
+            {project.result && (
+              <DetailSection title="Sonuç" content={project.result} />
+            )}
+          </div>
+        )}
 
-        <div className="mt-8">
-          <h3 className="text-sm font-semibold">Öne çıkan özellikler</h3>
-          <ul className="mt-3 grid gap-2 sm:grid-cols-2">
-            {project.features.map((feature) => (
-              <li
-                key={feature}
-                className="flex items-start gap-2 text-sm text-[#6e6e73]"
-              >
-                <span
-                  aria-hidden="true"
-                  className="mt-1.5 size-1.5 shrink-0 rounded-full bg-slate-500"
-                />
-                {feature}
-              </li>
-            ))}
-          </ul>
-        </div>
+        {project.features.length > 0 && (
+          <div className="mt-8">
+            <h3 className="text-sm font-semibold">Öne çıkan özellikler</h3>
+            <ul className="mt-3 grid gap-2 sm:grid-cols-2">
+              {project.features.map((feature) => (
+                <li
+                  key={feature}
+                  className="flex items-start gap-2 text-sm text-[#6e6e73]"
+                >
+                  <span
+                    aria-hidden="true"
+                    className="mt-1.5 size-1.5 shrink-0 rounded-full bg-slate-500"
+                  />
+                  {feature}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
 
-        <div className="mt-8 border-t border-[#d2d2d7] pt-6">
-          <h3 className="text-sm font-semibold">Teknolojiler</h3>
-          <ul className="mt-3 flex flex-wrap gap-2">
-            {project.technologies.map((technology) => (
-              <li
-                key={technology}
-                className="rounded-full border border-[#d2d2d7] px-3 py-1.5 text-xs text-[#6e6e73]"
-              >
-                {technology}
-              </li>
-            ))}
-          </ul>
-        </div>
+        {project.technologies.length > 0 && (
+          <div className="mt-8 border-t border-[#d2d2d7] pt-6">
+            <h3 className="text-sm font-semibold">Teknolojiler</h3>
+            <ul className="mt-3 flex flex-wrap gap-2">
+              {project.technologies.map((technology) => (
+                <li
+                  key={technology}
+                  className="rounded-full border border-[#d2d2d7] px-3 py-1.5 text-xs text-[#6e6e73]"
+                >
+                  {technology}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
 
         {project.github && (
           <a

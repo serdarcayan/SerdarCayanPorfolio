@@ -148,6 +148,7 @@ const PortfolioScene = () => {
           </button>
         )}
       </div>
+      <p className="absolute text-red-800 z-50 top-1 left-1 font-normal text-xs">Geliştirme aşamasındadır.</p>
     </main>
   );
 };

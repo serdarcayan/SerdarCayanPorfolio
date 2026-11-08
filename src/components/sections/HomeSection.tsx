@@ -36,7 +36,7 @@ const HomeSection = ({ onSectionSelect }: HomeSectionProps) => {
             className="block h-auto w-8 max-w-full object-contain sm:w-10 md:w-11"
           />
         ) : (
-          <span className="text-[10px] font-bold tracking-[0.25em] text-[#0071e3] sm:text-xs">
+          <span className="text-[10px] font-bold tracking-[0.25em] text-[#066079] sm:text-xs">
             SC
           </span>
         )}
@@ -75,7 +75,7 @@ const HomeSection = ({ onSectionSelect }: HomeSectionProps) => {
           <h1 className="text-[clamp(3rem,14vw,7rem)] font-semibold leading-[0.9] tracking-[-0.06em] text-[#1d1d1f]">
             SERDAR
             <br />
-            <span className="text-[#0071e3]">
+            <span className="text-[#066079]">
               ÇAYAN
             </span>
           </h1>
